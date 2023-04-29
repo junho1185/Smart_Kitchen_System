@@ -36,7 +36,7 @@ class RecipeScreen(Screen):
         layout = BoxLayout(orientation='horizontal', size_hint=(1, 0.8))
         scrollLayout = ScrollView(do_scroll_x=False)
         button_column = BoxLayout(orientation='vertical', size_hint=(0.2, 1), spacing=30)
-        
+
         korean_button = ToggleButton(text='Korean', group='food_group', on_press=self.switchScrollContent)
         japanese_button = ToggleButton(text='Japanese', group='food_group', on_press=self.switchScrollContent)
         chinese_button = ToggleButton(text='Chinese', group='food_group', on_press=self.switchScrollContent)
@@ -60,17 +60,17 @@ class RecipeScreen(Screen):
 
         if button.text == 'Korean':
             for i in range(10):
-                button = Button(text=f'Korean dish {i}', size_hint=(0.3, None), size=(100, 300))
+                button = Button(text=f'Korean dish {i}', size_hint_y=None, size=(100, 300))
                 self.scrollContent.add_widget(button)
         elif button.text == 'Japanese':
             for i in range(10):
-                button = Button(text=f'Japanese dish {i}', size=(100, 100))
+                button = Button(text=f'Japanese dish {i}', size_hint_y=None, size=(100, 300))
                 self.scrollContent.add_widget(button)
         elif button.text == 'Chinese':
             for i in range(10):
-                button = Button(text=f'Chinese dish {i}', size=(100, 100))
+                button = Button(text=f'Chinese dish {i}', size_hint_y=None, size=(100, 300))
                 self.scrollContent.add_widget(button)
         else:
             for i in range(10):
-                button = Button(text=f'Western dish {i}', size=(100, 100))
+                button = Button(text=f'Western dish {i}', size_hint_y=None, size=(100, 300))
                 self.scrollContent.add_widget(button)
