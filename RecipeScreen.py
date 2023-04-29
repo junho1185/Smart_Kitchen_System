@@ -13,8 +13,9 @@ class RecipeScreen(Screen):
 
         layout = BoxLayout(orientation='vertical', padding=30)
         hLayout = BoxLayout(orientation='horizontal', size_hint=(1, 0.2))
-        self.scrollContent = GridLayout(cols=3, size_hint=(1, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5},
+        self.scrollContent = GridLayout(cols=3, size_hint_y=None, pos_hint={'center_x': 0.5, 'center_y': 0.5},
                                         spacing=30, padding=30)
+        self.scrollContent.bind(minimum_height=self.scrollContent.setter('height'))
 
         cLayout = self.content_layout()
 
