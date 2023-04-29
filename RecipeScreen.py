@@ -16,6 +16,7 @@ class RecipeScreen(Screen):
         self.scrollContent = GridLayout(cols=3, size_hint_y=None, pos_hint={'center_x': 0.5, 'center_y': 0.5},
                                         spacing=30, padding=30)
         self.scrollContent.bind(minimum_height=self.scrollContent.setter('height'))
+        self.scrollLayout = ScrollView(do_scroll_x=False)
 
         cLayout = self.content_layout()
 
@@ -34,7 +35,6 @@ class RecipeScreen(Screen):
 
     def content_layout(self):
         layout = BoxLayout(orientation='horizontal', size_hint=(1, 0.8))
-        scrollLayout = ScrollView(do_scroll_x=False)
         button_column = BoxLayout(orientation='vertical', size_hint=(0.2, 1), spacing=30)
 
         korean_button = ToggleButton(text='Korean', group='food_group', on_press=self.switchScrollContent)
@@ -47,16 +47,17 @@ class RecipeScreen(Screen):
         button_column.add_widget(chinese_button)
         button_column.add_widget(western_button)
 
-        scrollLayout.add_widget(self.scrollContent)
+        self.scrollLayout.add_widget(self.scrollContent)
 
         layout.add_widget(button_column)
-        layout.add_widget(scrollLayout)
+        layout.add_widget(self.scrollLayout)
         return layout
 
     def switchMain(self, *args):
         self.manager.current = 'main_screen'
     def switchScrollContent(self, button):
         self.scrollContent.clear_widgets()
+        self.scrollLayout.scroll_y = 1
 
         if button.text == 'Korean':
             for i in range(10):
