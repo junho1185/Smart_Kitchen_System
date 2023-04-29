@@ -1,14 +1,12 @@
-from kivy import Config
 from kivy.app import App
-from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.label import Label
 from kivy.uix.button import Button
-from kivy.uix.floatlayout import FloatLayout
 
 from RecipeScreen import RecipeScreen
 from MaterialScreen import MaterialScreen
+
 
 class MainScreen(Screen):
 
@@ -25,7 +23,8 @@ class MainScreen(Screen):
         mButton.bind(on_press=self.switchToMaterial)
 
         layout.add_widget(nameLabel)
-        bLayout = BoxLayout(orientation='horizontal', size_hint=(0.5, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5}, spacing=30)
+        bLayout = BoxLayout(orientation='horizontal', size_hint=(0.5, 1), pos_hint={'center_x': 0.5, 'center_y': 0.5},
+                            spacing=30)
         bLayout.add_widget(rButton)
         bLayout.add_widget(mButton)
         layout.add_widget(bLayout)
@@ -35,8 +34,11 @@ class MainScreen(Screen):
 
     def switchToRecipe(self, *args):
         self.manager.current = 'recipe_screen'
+
     def switchToMaterial(self, *args):
         self.manager.current = 'material_screen'
+
+
 class MyApp(App):
     def build(self):
         self.title = 'Smart Kitchen System'
@@ -51,6 +53,7 @@ class MyApp(App):
         screen_manager.add_widget(materialScreen)
 
         return screen_manager
+
 
 if __name__ == '__main__':
     MyApp().run()
