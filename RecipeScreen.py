@@ -54,7 +54,7 @@ class RecipeScreen(Screen):
         return layout
 
     def switchMain(self, *args):
-        self.manager.current = 'main_screen'
+        self.manager.current = 'main_screen_button'
     def switchScrollContent(self, button):
         self.scrollContent.clear_widgets()
         self.scrollLayout.scroll_y = 1

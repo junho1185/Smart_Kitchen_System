@@ -30,7 +30,7 @@ class MaterialScreen(Screen):
         self.add_widget(layout)
 
     def switchMain(self, *args):
-        self.manager.current='main_screen'
+        self.manager.current='main_screen_button'
 
     def content_layout(self):
         layout = BoxLayout(orientation='horizontal', size_hint=(1, 0.8))
