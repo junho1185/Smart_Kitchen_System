@@ -23,7 +23,7 @@ class MainScreenButton(Screen):
         mButton = Button(text='Material')
         sButton = Button(text='Settings', pos_hint={'center_x':0.9, 'center_y':0.9}, size_hint=(0.1,0.1))
         nameLabel = Label(text='Smart Kitchen System', pos_hint={'center_x':0.5, 'center_y':0.9})
-        footLabel = Label(text='Made by 최금자', font_name='AppleGothic.ttf', pos_hint={'center_x':0.5, 'center_y':0.1})
+        footLabel = Label(text='Made by 최금자', pos_hint={'center_x':0.5, 'center_y':0.1})
 
         rButton.bind(on_press=self.switchToRecipe)
         mButton.bind(on_press=self.switchToMaterial)
