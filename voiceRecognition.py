@@ -4,6 +4,7 @@ class voiceRecognition:
     def __init__(self):
         # 음성 인식 객체 생성
         self.r = sr.Recognizer()
+        self.text = ""
 
     def speechToText(self):
 

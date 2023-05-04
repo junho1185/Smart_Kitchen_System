@@ -4,33 +4,13 @@
       "finish_reason": "stop",
       "index": 0,
       "message": {
-        "content": "{\n  \"Action\": \"Request\",\n  \"Item\": \"\uac04\uc7a5\"\n}",
+        "content": "{\n  \"Action\": \"Request\",\n  \"Item\": \"\ub9c8\ub298\"\n}",
         "role": "assistant"
       }
     }
   ],
-  "created": 1683201831,
-  "id": "chatcmpl-7CRyZYjetSMAQAw2Yy2KvpTNvTRiV",
-  "model": "gpt-3.5-turbo-0301",
-  "object": "chat.completion",
-  "usage": {
-    "completion_tokens": 17,
-    "prompt_tokens": 61,
-    "total_tokens": 78
-  }
-}{
-  "choices": [
-    {
-      "finish_reason": "stop",
-      "index": 0,
-      "message": {
-        "content": "{\n  \"Action\": \"Request\",\n  \"Item\": \"\uc124\ud0d5\"\n}",
-        "role": "assistant"
-      }
-    }
-  ],
-  "created": 1683207912,
-  "id": "chatcmpl-7CTYeLJ1eXHFGN823IjM9cfduDiJj",
+  "created": 1683208786,
+  "id": "chatcmpl-7CTmkIA07WYFrBCt2PWt7JV05y6Za",
   "model": "gpt-3.5-turbo-0301",
   "object": "chat.completion",
   "usage": {

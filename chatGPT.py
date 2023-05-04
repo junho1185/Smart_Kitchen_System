@@ -31,4 +31,4 @@ class chatGPT:
 
         # Open the file in append mode and write the text to it
         with open(filename, "a") as file:
-            file.write(str(response))
+            file.write(str(response)+'\n')
