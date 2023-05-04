@@ -18,4 +18,24 @@
     "prompt_tokens": 61,
     "total_tokens": 78
   }
+}{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Action\": \"Request\",\n  \"Item\": \"\uc124\ud0d5\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1683207912,
+  "id": "chatcmpl-7CTYeLJ1eXHFGN823IjM9cfduDiJj",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 19,
+    "prompt_tokens": 62,
+    "total_tokens": 81
+  }
 }

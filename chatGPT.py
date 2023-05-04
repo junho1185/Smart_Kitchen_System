@@ -1,8 +1,8 @@
 import openai
-
+import os
 class chatGPT:
     def __init__(self, speechTxt):
-        openai.api_key = "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"
+        openai.api_key = os.environ.get("OPENAI_API_KEY")
         self.model = "gpt-3.5-turbo"
         self.userSpeechText = "\"" + speechTxt + "\""
         self.instruction = 'Summarize what they need, put it into json format. Fields must be Action and Item. In Action fields ' \
