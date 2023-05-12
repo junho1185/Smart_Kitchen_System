@@ -5,6 +5,7 @@ from RecipeScreen import RecipeScreen
 from MaterialScreen import MaterialScreen
 from MainScreenButton import MainScreenButton
 from MainScreenVoice import MainScreenVoice
+from customizedWidgets import setting
 
 class MyApp(App):
     def build(self):
@@ -21,7 +22,8 @@ class MyApp(App):
         screen_manager.add_widget(recipeScreen)
         screen_manager.add_widget(materialScreen)
 
-        mode = self.getMode()
+        S = setting()
+        mode = S.getMode()
 
         if mode == 'button':
             screen_manager.current = 'main_screen_button'
@@ -29,13 +31,6 @@ class MyApp(App):
             screen_manager.current = 'main_screen_voice'
 
         return screen_manager
-
-    def getMode(self):
-        config = configparser.ConfigParser()
-        config.read('user/settings.ini')
-        mode = config.get('Control', 'mode')
-
-        return mode
 
 
 if __name__ == '__main__':

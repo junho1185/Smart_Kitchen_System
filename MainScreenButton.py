@@ -4,6 +4,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.popup import Popup
 from kivy.uix.screenmanager import Screen
 from functools import partial
+from customizedWidgets import setting
 import configparser
 
 from kivy.uix.switch import Switch
@@ -45,21 +46,9 @@ class MainScreenButton(Screen):
     def switchToMaterial(self, *args):
         self.manager.current = 'material_screen'
 
-    def getMode(self):
-        config = configparser.ConfigParser()
-        config.read('user/settings.ini')
-        mode = config.get('Control', 'mode')
-
-        return mode
-
-    def setMode(self, mode, *args):
-        with open('user/settings.ini', 'w') as configfile:
-            config = configparser.ConfigParser()
-            config['Control'] = {'mode':mode}
-            config.write(configfile)
-
     def settingPopUp(self, *args):
-        mode = self.getMode()
+        S = setting()
+        mode = S.getMode()
         popup_content = FloatLayout()
         modeSwitch = Switch(pos_hint = {'center_x':0.5, 'center_y':0.5})
 
@@ -79,7 +68,8 @@ class MainScreenButton(Screen):
         m = True if mode == 'voice' else False
         mode = 'voice' if switch.active else 'button'
         if m != switch.active:
-            self.setMode(mode)
+            S = setting()
+            S.setMode(mode)
             if switch.active:
                 self.manager.current = 'main_screen_voice'
             else:

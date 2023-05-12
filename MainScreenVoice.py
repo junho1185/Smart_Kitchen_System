@@ -4,7 +4,8 @@ from kivy.uix.popup import Popup
 from kivy.uix.screenmanager import Screen
 from functools import partial
 from voiceRecognition import voiceRecognition
-from chatGPT import chatGPT
+from chatGPT import ChatGPT
+from customizedWidgets import setting
 import configparser
 
 from kivy.uix.switch import Switch
@@ -33,25 +34,14 @@ class MainScreenVoice(Screen):
         vR.speechToText()
         text = vR.text
 
-        cGPT = chatGPT(text)
-        json_response = cGPT.getResponse()
+        cGPT = ChatGPT(text)
+        json_response = cGPT.get_response()
         print(json_response)
 
-    def getMode(self):
-        config = configparser.ConfigParser()
-        config.read('user/settings.ini')
-        mode = config.get('Control', 'mode')
-
-        return mode
-
-    def setMode(self, mode, *args):
-        with open('user/settings.ini', 'w') as configfile:
-            config = configparser.ConfigParser()
-            config['Control'] = {'mode':mode}
-            config.write(configfile)
 
     def settingPopUp(self, *args):
-        mode = self.getMode()
+        S = setting()
+        mode = S.getMode()
         popup_content = FloatLayout()
         modeSwitch = Switch(pos_hint = {'center_x':0.5, 'center_y':0.5})
 
@@ -71,7 +61,8 @@ class MainScreenVoice(Screen):
         m = True if mode == 'voice' else False
         mode = 'voice' if switch.active else 'button'
         if m != switch.active:
-            self.setMode(mode)
+            S = setting()
+            S.setMode(mode)
             if switch.active:
                 self.manager.current = 'main_screen_voice'
             else:
