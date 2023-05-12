@@ -1,5 +1,6 @@
 import configparser
 from kivy.app import App
+from kivy.config import Config
 from kivy.uix.screenmanager import ScreenManager
 from RecipeScreen import RecipeScreen
 from MaterialScreen import MaterialScreen
@@ -10,6 +11,7 @@ from customizedWidgets import setting
 class MyApp(App):
     def build(self):
         self.title = 'Smart Kitchen System'
+        Config.set('graphics', 'fullscreen', 'auto')
 
         screen_manager = ScreenManager()
         mainScreenButton = MainScreenButton(name='main_screen_button')
