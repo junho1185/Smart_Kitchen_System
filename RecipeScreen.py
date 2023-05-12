@@ -61,17 +61,17 @@ class RecipeScreen(Screen):
 
         if button.text == 'Korean':
             for i in range(10):
-                button = Button(text=f'Korean dish {i}', size_hint_y=None, size=(100, 300))
+                button = Button(text=f'Korean dish {i}', size_hint_y=None, size=(100, 100))
                 self.scrollContent.add_widget(button)
         elif button.text == 'Japanese':
             for i in range(10):
-                button = Button(text=f'Japanese dish {i}', size_hint_y=None, size=(100, 300))
+                button = Button(text=f'Japanese dish {i}', size_hint_y=None, size=(100, 100))
                 self.scrollContent.add_widget(button)
         elif button.text == 'Chinese':
             for i in range(10):
-                button = Button(text=f'Chinese dish {i}', size_hint_y=None, size=(100, 300))
+                button = Button(text=f'Chinese dish {i}', size_hint_y=None, size=(100, 100))
                 self.scrollContent.add_widget(button)
         else:
             for i in range(10):
-                button = Button(text=f'Western dish {i}', size_hint_y=None, size=(100, 300))
+                button = Button(text=f'Western dish {i}', size_hint_y=None, size=(100, 100))
                 self.scrollContent.add_widget(button)

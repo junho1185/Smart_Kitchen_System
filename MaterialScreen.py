@@ -38,7 +38,7 @@ class MaterialScreen(Screen):
 
         # section to add materials!
         for i in range(15):
-            button = Button(text=f'Material {i}', size_hint_y=None, size=(100, 300))
+            button = Button(text=f'Material {i}', size_hint_y=None, size=(100, 100))
             self.scrollContent.add_widget(button)
 
         scrollLayout.add_widget(self.scrollContent)
