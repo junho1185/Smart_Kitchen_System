@@ -5,6 +5,8 @@ from kivy.uix.label import Label
 from kivy.uix.screenmanager import Screen
 from kivy.uix.scrollview import ScrollView
 
+from customizedWidgets import cButton
+
 
 class MaterialScreen(Screen):
     def __init__(self, **kwargs):
@@ -38,7 +40,7 @@ class MaterialScreen(Screen):
 
         # section to add materials!
         for i in range(15):
-            button = Button(text=f'Material {i}', size_hint_y=None, size=(100, 100))
+            button = cButton(text=f'Material {i}', size_hint_y=None, size=(100, 100))
             self.scrollContent.add_widget(button)
 
         scrollLayout.add_widget(self.scrollContent)
