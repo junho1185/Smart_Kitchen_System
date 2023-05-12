@@ -6,7 +6,7 @@ from kivy.uix.label import Label
 class cLabel(Label):
     def __init__(self, **kwargs):
         super(cLabel, self).__init__(**kwargs)
-        self.font_name = 'Binggrae-Bold.otf'
+        self.font_name = 'NanumGothicBold.ttf'
 
 class setting:
     def getMode(self):

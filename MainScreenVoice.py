@@ -1,3 +1,5 @@
+import threading
+
 from kivy.uix.button import Button
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.popup import Popup
@@ -30,14 +32,19 @@ class MainScreenVoice(Screen):
         self.add_widget(layout)
 
     def micFunc(self, *args):
+        mThread = threading.Thread(target=self.micThread)
+        mThread.start()
+        mThread.join()
+        json_result = mThread.json_response
+
+    def micThread(self):
         vR = voiceRecognition()
         vR.speechToText()
         text = vR.text
 
         cGPT = ChatGPT(text)
         json_response = cGPT.get_response()
-        print(json_response)
-
+        return json_response
 
     def settingPopUp(self, *args):
         S = setting()

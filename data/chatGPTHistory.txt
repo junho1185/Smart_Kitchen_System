@@ -102,3 +102,24 @@
     "total_tokens": 103
   }
 }
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Action\": \"Request\",\n   \"Item\": \"\uac04\uc7a5\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1683869036,
+  "id": "chatcmpl-7FFXw07yYh4BC4AwPphSTH472TDEQ",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 17,
+    "prompt_tokens": 60,
+    "total_tokens": 77
+  }
+}
