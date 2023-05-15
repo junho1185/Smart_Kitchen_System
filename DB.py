@@ -19,8 +19,13 @@ class mysqlDB:
         return fetchResult[0][0]
 
     def getFoodNames(self, region):
-        query = "SELECT foodName FROM RecipeIndex WHERE region=%d"
+        query = "SELECT foodName FROM RecipeIndex WHERE region=%s"
         self.cursor.execute(query, [region])
         fetchResult = self.cursor.fetchall()
-        foodNames = list(fetchResult[0])
+        foodNames = []
+
+        for i in range(len(fetchResult)):
+            foodNames.append(fetchResult[i][0])
+
+        print(foodNames)
         return foodNames

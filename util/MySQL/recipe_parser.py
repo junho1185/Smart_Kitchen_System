@@ -12,7 +12,7 @@ class RecipeParser:
                 tokens = line.split()
                 if len(tokens) == 0:
                     continue 
-                name = tokens[1]
+                name = ' '.join(tokens[1:])
                 recipe = f.readline()
                 if(tokens[0] == 'Korean'):
                     self.Korean[name] = recipe
