@@ -26,6 +26,4 @@ class mysqlDB:
 
         for i in range(len(fetchResult)):
             foodNames.append(fetchResult[i][0])
-
-        print(foodNames)
         return foodNames
