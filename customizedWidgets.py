@@ -26,11 +26,11 @@ class cToggleButton(ToggleButton):
 class setting:
     def getMode(self):
         config = configparser.ConfigParser()
-        config.read('user/settings.ini')
+        config.read('data/settings.ini')
         mode = config.get('Control', 'mode')
         return mode
     def setMode(self, mode, *args):
-        with open('user/settings.ini', 'w') as configfile:
+        with open('data/settings.ini', 'w') as configfile:
             config = configparser.ConfigParser()
             config['Control'] = {'mode':mode}
             config.write(configfile)

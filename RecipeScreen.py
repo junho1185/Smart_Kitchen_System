@@ -23,7 +23,7 @@ class RecipeScreen(Screen):
 
         cLayout = self.content_layout()
 
-        backButton = Button(text='Back', size_hint=(0.15, 0.7), pos_hint={'center_x':0.5, 'center_y':0.5})
+        backButton = Button(text='Back', size_hint=(0.15, 0.7), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         nameLabel = cLabel(text='Choose a Recipe!', size_hint=(0.7, 1))
 
         backButton.bind(on_press=self.switchMain)
@@ -58,6 +58,7 @@ class RecipeScreen(Screen):
 
     def switchMain(self, *args):
         self.manager.current = 'main_screen_button'
+
     def switchScrollContent(self, button):
         self.scrollContent.clear_widgets()
         self.scrollLayout.scroll_y = 1
@@ -67,7 +68,8 @@ class RecipeScreen(Screen):
         if button.text == 'Korean':
             foodNames = db.getFoodNames(1)
             for foodName in foodNames:
-                button = cButton(text=foodName, size_hint_y=None, size=(100, 100), backround_normal=Image(source=f'img/Korean/{foodName}.png'))
+                button = cButton(text=foodName, size_hint_y=None, size=(100, 100),
+                                 backround_normal=Image(source=f'img/Korean/{foodName}.png'))
                 self.scrollContent.add_widget(button)
         elif button.text == 'Japanese':
             for i in range(10):
