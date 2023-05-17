@@ -25,8 +25,8 @@ class RecipeStepScreen(Screen):
         self.recipe = self.mydb.getRecipe(foodID)
         self.contentUpdate()
 
-        self.prevButton.bind(on_release=self.prevStep)
-        self.nextButton.bind(on_release=self.nextStep)
+        self.prevButton.bind(on_press=self.prevStep)
+        self.nextButton.bind(on_press=self.nextStep)
 
         footer_layout.add_widget(self.prevButton)
         footer_layout.add_widget(self.stepLabel)
