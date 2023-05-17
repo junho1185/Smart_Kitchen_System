@@ -7,6 +7,7 @@ from kivy.uix.scrollview import ScrollView
 from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.image import Image
 from customizedWidgets import cButton, cLabel, cToggleButton
+from screen.RecipeStepScreen import RecipeStepScreen
 from DB import mysqlDB
 
 
@@ -40,10 +41,10 @@ class RecipeScreen(Screen):
         layout = BoxLayout(orientation='horizontal', size_hint=(1, 0.8))
         button_column = BoxLayout(orientation='vertical', size_hint=(0.2, 1), spacing=30)
 
-        korean_button = cToggleButton(text='Korean', group='food_group', on_press=self.switchScrollContent)
-        japanese_button = cToggleButton(text='Japanese', group='food_group', on_press=self.switchScrollContent)
-        chinese_button = cToggleButton(text='Chinese', group='food_group', on_press=self.switchScrollContent)
-        western_button = cToggleButton(text='Western', group='food_group', on_press=self.switchScrollContent)
+        korean_button = cToggleButton(text='한식', group='food_group', on_press=self.switchScrollContent)
+        japanese_button = cToggleButton(text='일식', group='food_group', on_press=self.switchScrollContent)
+        chinese_button = cToggleButton(text='중식', group='food_group', on_press=self.switchScrollContent)
+        western_button = cToggleButton(text='양식', group='food_group', on_press=self.switchScrollContent)
 
         button_column.add_widget(korean_button)
         button_column.add_widget(japanese_button)
@@ -65,19 +66,20 @@ class RecipeScreen(Screen):
 
         db = mysqlDB()
 
-        if button.text == 'Korean':
+        if button.text == '한식':
             foodNames = db.getFoodNames(1)
             for foodName in foodNames:
                 button = cButton(text=foodName, size_hint_y=None, size=(100, 100),
                                  background_normal=f'img/Korean/{foodName}.png')
+                button.bind(on_press=self.switchRecipeStep)
                 self.scrollContent.add_widget(button)
-        elif button.text == 'Japanese':
+        elif button.text == '일식':
             foodNames = db.getFoodNames(2)
             for foodName in foodNames:
                 button = cButton(text=foodName, size_hint_y=None, size=(100, 100),
                                  background_normal=f'img/Japanese/{foodName}.png')
                 self.scrollContent.add_widget(button)
-        elif button.text == 'Chinese':
+        elif button.text == '중식':
             foodNames = db.getFoodNames(3)
             for foodName in foodNames:
                 button = cButton(text=foodName, size_hint_y=None, size=(100, 100),
@@ -90,4 +92,18 @@ class RecipeScreen(Screen):
                                  background_normal=f'img/Western/{foodName}.png')
                 self.scrollContent.add_widget(button)
 
-        db.mydb.close()
+        db.close()
+
+    def switchRecipeStep(self, button):
+        db = mysqlDB()
+        foodName = button.text
+        foodID = db.getID(foodName)
+        try:
+            self.manager.remove_widget(self.manager.get_screen('recipe'))
+        except KeyError:
+            # Handle the case when the 'recipe' screen object does not exist
+            print("The 'recipe' screen does not exist.")
+
+        recipeStepScreen = RecipeStepScreen(foodID)
+        self.manager.add_widget(recipeStepScreen)
+        self.manager.current = 'recipe'

@@ -1,10 +1,10 @@
 from kivy.app import App
 from kivy.config import Config
 from kivy.uix.screenmanager import ScreenManager
-from RecipeScreen import RecipeScreen
-from MaterialScreen import MaterialScreen
-from MainScreenButton import MainScreenButton
-from MainScreenVoice import MainScreenVoice
+from screen.RecipeScreen import RecipeScreen
+from screen.MaterialScreen import MaterialScreen
+from screen.MainScreenButton import MainScreenButton
+from screen.MainScreenVoice import MainScreenVoice
 from customizedWidgets import setting
 
 class MyApp(App):
@@ -17,11 +17,13 @@ class MyApp(App):
         mainScreenVoice = MainScreenVoice(name='main_screen_voice')
         recipeScreen = RecipeScreen(name='recipe_screen')
         materialScreen = MaterialScreen(name='material_screen')
+        tmpScreen = RecipeScreen(name='recipe')
 
         screen_manager.add_widget(mainScreenButton)
         screen_manager.add_widget(mainScreenVoice)
         screen_manager.add_widget(recipeScreen)
         screen_manager.add_widget(materialScreen)
+        screen_manager.add_widget(tmpScreen)
 
         S = setting()
         mode = S.getMode()

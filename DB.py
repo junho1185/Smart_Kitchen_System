@@ -27,3 +27,25 @@ class mysqlDB:
         for i in range(len(fetchResult)):
             foodNames.append(fetchResult[i][0])
         return foodNames
+
+    def getFoodName(self, foodID):
+        query = "SELECT foodName FROM RecipeIndex WHERE id = %s"
+        self.cursor.execute(query, [foodID])
+        fetchResult = self.cursor.fetchall()
+        foodName = fetchResult[0][0]
+
+        return foodName
+
+    def getRecipe(self, foodID):
+        query = "SELECT recipe FROM RecipeSteps WHERE foodID = %s"
+        self.cursor.execute(query, [foodID])
+        fetchResult = self.cursor.fetchall()
+        recipe = []
+
+        for i in range(len(fetchResult)):
+            recipe.append(fetchResult[i][0])
+
+        return recipe
+
+    def close(self):
+        self.mydb.close()
