@@ -1,6 +1,3 @@
-import kivy
-from kivy.app import App
-from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen
 from customizedWidgets import cLabel, cButton, setting
@@ -28,8 +25,8 @@ class RecipeStepScreen(Screen):
         self.recipe = self.mydb.getRecipe(foodID)
         self.contentUpdate()
 
-        self.prevButton.bind(on_press=self.prevStep)
-        self.nextButton.bind(on_press=self.nextStep)
+        self.prevButton.bind(on_release=self.prevStep)
+        self.nextButton.bind(on_release=self.nextStep)
 
         footer_layout.add_widget(self.prevButton)
         footer_layout.add_widget(self.stepLabel)
