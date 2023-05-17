@@ -10,7 +10,11 @@ from customizedWidgets import setting
 class MyApp(App):
     def build(self):
         self.title = 'Smart Kitchen System'
-        Config.set('graphics', 'fullscreen', 'auto')
+        # Config.set('graphics', 'fullscreen', 'auto')
+
+        # set window size
+        Config.set('graphics', 'width', '800')
+        Config.set('graphics', 'height', '480')
 
         screen_manager = ScreenManager()
         mainScreenButton = MainScreenButton(name='main_screen_button')

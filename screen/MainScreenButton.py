@@ -4,7 +4,7 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.popup import Popup
 from kivy.uix.screenmanager import Screen
 from functools import partial
-from customizedWidgets import setting
+from customizedWidgets import setting, cButton
 import configparser
 
 from kivy.uix.switch import Switch
@@ -21,8 +21,8 @@ class MainScreenButton(Screen):
         bLayout = BoxLayout(orientation='horizontal', size_hint=(0.75, 0.6), pos_hint={'center_x': 0.5, 'center_y': 0.5},
                             spacing=30)
 
-        rButton = Button(text='Recipe')
-        mButton = Button(text='Material')
+        rButton = cButton(text='요리')
+        mButton = cButton(text='재료')
         sButton = Button(text='Settings', pos_hint={'center_x':0.9, 'center_y':0.9}, size_hint=(0.1,0.1))
         nameLabel = cLabel(text='Smart Kitchen System', pos_hint={'center_x':0.5, 'center_y':0.9})
         footLabel = cLabel(text='Made by 최금자', pos_hint={'center_x':0.5, 'center_y':0.1})

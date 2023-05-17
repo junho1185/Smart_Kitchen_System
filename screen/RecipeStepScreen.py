@@ -16,8 +16,8 @@ class RecipeStepScreen(Screen):
         layout = BoxLayout(orientation='vertical')
         footer_layout = BoxLayout(orientation='horizontal', size_hint=(1, 0.2))
 
-        self.recipeNameLabel = cLabel(text=self.foodName, size_hint=(1, 0.2), font_size=30, pos_hint={'center_x': 0.5, 'center_y': 0.9})
-        self.recipeContentLabel = cLabel(size_hint=(1, 0.7))
+        self.recipeNameLabel = cLabel(text=self.foodName, size_hint=(1, 0.2), font_size=35, pos_hint={'center_x': 0.5, 'center_y': 0.9})
+        self.recipeContentLabel = cLabel(size_hint=(1, 0.7), font_size = 30)
         self.stepLabel = cLabel(size_hint=(0.3, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
         self.prevButton = cButton(text='이전', size_hint=(0.2, 0.8), pos_hint={'center_x': 0.1, 'center_y': 0.5})
         self.nextButton = cButton(text='다음', size_hint=(0.2, 0.8), pos_hint={'center_x': 0.9, 'center_y': 0.5})
@@ -46,6 +46,12 @@ class RecipeStepScreen(Screen):
 
     def nextStep(self, *args):
         if self.currentStep == len(self.recipe) - 1:
+            S = setting()
+            mode = S.getMode()
+            if mode == 'button':
+                self.manager.current = 'main_screen_button'
+            else:
+                self.manager.current = 'main_screen_voice'
             return
         self.currentStep += 1
         self.contentUpdate()
