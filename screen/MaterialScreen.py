@@ -4,6 +4,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.label import Label
 from kivy.uix.screenmanager import Screen
 from kivy.uix.scrollview import ScrollView
+from DB import mysqlDB
 
 from customizedWidgets import cButton
 
@@ -11,6 +12,9 @@ from customizedWidgets import cButton
 class MaterialScreen(Screen):
     def __init__(self, **kwargs):
         super(MaterialScreen, self).__init__(**kwargs)
+        self.mydb = mysqlDB()
+        self.materials = self.mydb.getMaterials()
+
         self.scrollContent = GridLayout(cols=4, size_hint_y=None, pos_hint={'center_x':0.5, 'center_y':0.5},
                                         padding=30, spacing=30)
         self.scrollContent.bind(minimum_height=self.scrollContent.setter('height'))
@@ -39,8 +43,8 @@ class MaterialScreen(Screen):
         scrollLayout = ScrollView(do_scroll_x=False)
 
         # section to add materials!
-        for i in range(15):
-            button = cButton(text=f'Material {i}', size_hint_y=None, size=(100, 100))
+        for material in self.materials:
+            button = cButton(text=material, size_hint_y=None, size=(100, 300))
             self.scrollContent.add_widget(button)
 
         scrollLayout.add_widget(self.scrollContent)

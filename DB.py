@@ -47,5 +47,23 @@ class mysqlDB:
 
         return recipe
 
+    def getPosition(self, material):
+        query = "SELECT location FROM Materials WHERE name = %s"
+        self.cursor.execute(query, [material])
+        fetchResult = self.cursor.fetchall()
+
+        return int(fetchResult[0][0])
+
+    def getMaterials(self):
+        query = "SELECT name FROM Materials"
+        self.cursor.execute(query)
+        fetchResult = self.cursor.fetchall()
+
+        material_list = []
+        for i in range(len(fetchResult)):
+            material_list.append(fetchResult[i][0])
+
+        return material_list
+
     def close(self):
         self.mydb.close()

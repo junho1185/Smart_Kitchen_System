@@ -2,6 +2,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import Screen
 from customizedWidgets import cLabel, cButton, setting
 from DB import mysqlDB
+from shelves import shelves
 
 class RecipeStepScreen(Screen):
     def __init__(self, foodID, **kwargs):
@@ -11,6 +12,7 @@ class RecipeStepScreen(Screen):
         self.mydb = mysqlDB()
 
         self.foodName = self.mydb.getFoodName(foodID)
+        self.material_list = self.mydb.getMaterials()
         self.currentStep = 0
 
         layout = BoxLayout(orientation='vertical')
@@ -57,5 +59,22 @@ class RecipeStepScreen(Screen):
         self.contentUpdate()
 
     def contentUpdate(self):
-        self.recipeContentLabel.text = self.recipe[self.currentStep]
+        recipeText = self.recipe[self.currentStep]
+        self.recipeContentLabel.text = recipeText
         self.stepLabel.text = f'{len(self.recipe)} 단계 중 {self.currentStep + 1} 단계'
+
+        mList = []
+        # code to rotate the shelf
+        # get materials in the recipe that are in the shelf
+        for material in self.material_list:
+            if material in recipeText:
+                mList.append(material)
+
+        print("Materials in this step", mList)
+        location_list = []
+        # convert material names to their positions
+        for material in mList:
+            location_list.append(self.mydb.getPosition(material))
+
+        sh = shelves(location_list)
+        sh.rotate()

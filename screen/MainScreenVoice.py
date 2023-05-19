@@ -35,7 +35,6 @@ class MainScreenVoice(Screen):
         mThread = threading.Thread(target=self.micThread)
         mThread.start()
         mThread.join()
-        json_result = mThread.json_response
 
     def micThread(self):
         vR = voiceRecognition()

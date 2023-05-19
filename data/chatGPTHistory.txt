@@ -123,3 +123,87 @@
     "total_tokens": 77
   }
 }
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Action\": \"Request\",\n   \"Item\": \"\uae40\uce58\ucc0c\uac1c \ub9cc\ub4e4\uace0 \uc2f6\uc5b4\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1684335175,
+  "id": "chatcmpl-7HCoJ1Vc3j3xvzHSRDhBNtdOVHqXj",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 27,
+    "prompt_tokens": 68,
+    "total_tokens": 95
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n\t\"Action\": \"Request\",\n\t\"Item\": \"\uac00\ub098\ub2e4\ub77c\ub9c8\ubc14\uc0ac\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1684337894,
+  "id": "chatcmpl-7HDWA0so0kjl0Z38kDCHQsoOBxuLG",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 24,
+    "prompt_tokens": 65,
+    "total_tokens": 89
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Action\": \"Request\",\n  \"Item\": \"\uae40\uce58\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1684337963,
+  "id": "chatcmpl-7HDXH9llrExaJxwTGHaHIx8Ex7Oom",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 21,
+    "prompt_tokens": 70,
+    "total_tokens": 91
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Action\": \"Request\",\n   \"Item\": \"\uae40\uce58\ucc0c\uac1c \ub9cc\ub4e4\uae30\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1684338096,
+  "id": "chatcmpl-7HDZQwUC8OwkFrmEgE4x7fGTGU7JB",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 24,
+    "prompt_tokens": 70,
+    "total_tokens": 94
+  }
+}
