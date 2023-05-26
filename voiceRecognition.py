@@ -9,7 +9,7 @@ class voiceRecognition:
     def speechToText(self):
 
         # 마이크를 사용해 음성 입력 받기
-        with sr.Microphone() as source:
+        with sr.Microphone(device_index=0, channel=0) as source:
             print("말씀하세요...")
             audio = self.r.listen(source)
 
