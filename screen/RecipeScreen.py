@@ -41,10 +41,10 @@ class RecipeScreen(Screen):
         layout = BoxLayout(orientation='horizontal', size_hint=(1, 0.8))
         button_column = BoxLayout(orientation='vertical', size_hint=(0.2, 1), spacing=30)
 
-        korean_button = cToggleButton(text='한식', font_size=45, group='food_group', on_press=self.switchScrollContent)
-        japanese_button = cToggleButton(text='일식', font_size=45, group='food_group', on_press=self.switchScrollContent)
-        chinese_button = cToggleButton(text='중식', font_size=45, group='food_group', on_press=self.switchScrollContent)
-        western_button = cToggleButton(text='양식', font_size=45, group='food_group', on_press=self.switchScrollContent)
+        korean_button = cToggleButton(text='한식', font_size=35, group='food_group', on_press=self.switchScrollContent)
+        japanese_button = cToggleButton(text='일식', font_size=35, group='food_group', on_press=self.switchScrollContent)
+        chinese_button = cToggleButton(text='중식', font_size=35, group='food_group', on_press=self.switchScrollContent)
+        western_button = cToggleButton(text='양식', font_size=35, group='food_group', on_press=self.switchScrollContent)
 
         button_column.add_widget(korean_button)
         button_column.add_widget(japanese_button)
@@ -64,7 +64,7 @@ class RecipeScreen(Screen):
         self.scrollContent.clear_widgets()
         self.scrollLayout.scroll_y = 1
 
-        image_height = 300
+        image_height = 150
 
         db = mysqlDB()
 

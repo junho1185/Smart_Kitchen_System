@@ -7,6 +7,7 @@ from kivy.uix.scrollview import ScrollView
 from DB import mysqlDB
 
 from customizedWidgets import cButton
+from customizedWidgets import cLabel
 
 
 class MaterialScreen(Screen):
@@ -23,7 +24,7 @@ class MaterialScreen(Screen):
         hLayout = BoxLayout(orientation='horizontal', size_hint=(1, 0.2))
         cLayout = self.content_layout()
         backButton = Button(text='Back', size_hint=(0.15, 0.7), pos_hint={'center_x': 0.5, 'center_y': 0.5})
-        nameLabel = Label(text='Choose a Material!', size_hint=(0.7, 1))
+        nameLabel = cLabel(text='재료를 선택하세요!!', size_hint=(0.7, 1))
 
         backButton.bind(on_press=self.switchMain)
 
@@ -44,7 +45,7 @@ class MaterialScreen(Screen):
 
         # section to add materials!
         for material in self.materials:
-            button = cButton(text=material, size_hint_y=None, size=(100, 300))
+            button = cButton(text=material, size_hint_y=None, size=(100, 150))
             self.scrollContent.add_widget(button)
 
         scrollLayout.add_widget(self.scrollContent)
