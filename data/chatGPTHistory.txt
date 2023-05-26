@@ -207,3 +207,108 @@
     "total_tokens": 94
   }
 }
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\uae40\uce58\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685078744,
+  "id": "chatcmpl-7KKFMYJ7WGKPfjNx9yGkDlG6uo4pW",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 86,
+    "total_tokens": 108
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Ingredient\",\n  \"Name\": \"\uac04\uc7a5\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685078935,
+  "id": "chatcmpl-7KKIRo3fajrqypt9QBNpEvQKTz8pV",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 17,
+    "prompt_tokens": 81,
+    "total_tokens": 98
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\": \"Dish\",\n   \"Name\": \"\uae40\uce58\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685082250,
+  "id": "chatcmpl-7KL9uZrabP7cmLPfvS8sfNLRyBoah",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 87,
+    "total_tokens": 109
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Type\": \"Dish\",\n    \"Name\": \"\uae40\uce58\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685082394,
+  "id": "chatcmpl-7KLCEDRZW4MdsTYDArdXcSvowEym6",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 99,
+    "total_tokens": 121
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\": \"Ingredient\",\n   \"Name\": \"\uac04\uc7a5\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685082420,
+  "id": "chatcmpl-7KLCeLHpP1UhlnPJMJWa4vymTkoGt",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 17,
+    "prompt_tokens": 78,
+    "total_tokens": 95
+  }
+}

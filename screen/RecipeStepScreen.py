@@ -20,7 +20,7 @@ class RecipeStepScreen(Screen):
 
         self.recipeNameLabel = cLabel(text=self.foodName, size_hint=(1, 0.2), font_size=35, pos_hint={'center_x': 0.5, 'center_y': 0.9})
         self.recipeContentLabel = cLabel(size_hint=(1, 0.7), font_size = 30)
-        self.stepLabel = cLabel(size_hint=(0.3, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5})
+        self.stepLabel = cLabel(size_hint=(0.3, 0.8), pos_hint={'center_x': 0.5, 'center_y': 0.5}, font_size=25, text_size=(None, None))
         self.prevButton = cButton(text='이전', size_hint=(0.2, 0.8), pos_hint={'center_x': 0.1, 'center_y': 0.5})
         self.nextButton = cButton(text='다음', size_hint=(0.2, 0.8), pos_hint={'center_x': 0.9, 'center_y': 0.5})
 
@@ -70,7 +70,6 @@ class RecipeStepScreen(Screen):
             if material in recipeText:
                 mList.append(material)
 
-        print("Materials in this step", mList)
         location_list = []
         # convert material names to their positions
         for material in mList:

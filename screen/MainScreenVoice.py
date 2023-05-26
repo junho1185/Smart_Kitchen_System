@@ -1,3 +1,4 @@
+import json
 import threading
 
 from kivy.uix.button import Button
@@ -5,6 +6,10 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.popup import Popup
 from kivy.uix.screenmanager import Screen
 from functools import partial
+
+from DB import mysqlDB
+from screen.MaterialShow import MaterialShow
+from screen.RecipeStepScreen import RecipeStepScreen
 from voiceRecognition import voiceRecognition
 from chatGPT import ChatGPT
 from customizedWidgets import setting
@@ -32,18 +37,35 @@ class MainScreenVoice(Screen):
         self.add_widget(layout)
 
     def micFunc(self, *args):
-        mThread = threading.Thread(target=self.micThread)
-        mThread.start()
-        mThread.join()
-
-    def micThread(self):
+        # mThread = threading.Thread(target=self.micThread)
+        # mThread.start()
+        # mThread.join()
         vR = voiceRecognition()
         vR.speechToText()
         text = vR.text
 
         cGPT = ChatGPT(text)
         json_response = cGPT.get_response()
-        return json_response
+        json_data = json.loads(json_response)
+
+        type = json_data['Type']
+        name = json_data['Name']
+
+        if type == 'Dish':
+            self.switchRecipeStep(name)
+        elif type == 'Ingredient':
+            self.switchMaterialShow(name)
+
+
+
+    # def micThread(self):
+    #     vR = voiceRecognition()
+    #     vR.speechToText()
+    #     text = vR.text
+    #
+    #     cGPT = ChatGPT(text)
+    #     json_response = cGPT.get_response()
+    #     return json_response
 
     def settingPopUp(self, *args):
         S = setting()
@@ -73,3 +95,30 @@ class MainScreenVoice(Screen):
                 self.manager.current = 'main_screen_voice'
             else:
                 self.manager.current = 'main_screen_button'
+
+    def switchRecipeStep(self, name):
+        db = mysqlDB()
+        foodName = name
+        foodID = db.getID(foodName)
+        try:
+            self.manager.remove_widget(self.manager.get_screen('recipe'))
+        except KeyError:
+            # Handle the case when the 'recipe' screen object does not exist
+            print("The 'recipe' screen does not exist.")
+
+        recipeStepScreen = RecipeStepScreen(foodID)
+        self.manager.add_widget(recipeStepScreen)
+        self.manager.current = 'recipe'
+        db.close()
+
+    def switchMaterialShow(self, name):
+        Name = name
+        try:
+            self.manager.remove_widget(self.manager.get_screen('material'))
+        except KeyError:
+            # Handle the case when the 'recipe' screen object does not exist
+            print("The 'material' screen does not exist.")
+
+        MaterialShowScreen = MaterialShow(Name)
+        self.manager.add_widget(MaterialShowScreen)
+        self.manager.current = 'material'

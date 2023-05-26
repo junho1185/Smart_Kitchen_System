@@ -7,9 +7,10 @@ class ChatGPT:
         openai.api_key = os.environ.get("OPENAI_API_KEY")
         self.model = "gpt-3.5-turbo"
         self.userSpeechText = "\"" + speechTxt + "\"\n"
-        self.instruction = 'Summarize what they need, put it into json format. Fields must be Action and Item. In ' \
-                           'Action fields it must be one of the followings: Request, Quit. Item field must be what ' \
-                           'they want in Korean.'
+        self.instruction = 'You are a natural language processor, the text above is what was recognized by mic input.' \
+                           'Summarize what they want and put it into a json format. There are two fields.' \
+                           'Type and Name. Type must be either Dish or Ingredient. Name must be represented in Korean.' \
+                           'Just give me a json format text.'
         self.command = (self.userSpeechText + self.instruction)
 
     def get_response(self):

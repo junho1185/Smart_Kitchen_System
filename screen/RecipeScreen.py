@@ -6,7 +6,7 @@ from kivy.uix.screenmanager import Screen
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.image import Image
-from customizedWidgets import cButton, cLabel, cToggleButton
+from customizedWidgets import cButton, cLabel, cToggleButton, setting
 from screen.RecipeStepScreen import RecipeStepScreen
 from DB import mysqlDB
 
@@ -58,7 +58,13 @@ class RecipeScreen(Screen):
         return layout
 
     def switchMain(self, *args):
-        self.manager.current = 'main_screen_button'
+        S = setting()
+        mode = S.getMode()
+
+        if mode == 'button':
+            self.manager.current = 'main_screen_button'
+        else:
+            self.manager.current = 'main_screen_voice'
 
     def switchScrollContent(self, button):
         self.scrollContent.clear_widgets()
@@ -112,3 +118,4 @@ class RecipeScreen(Screen):
         recipeStepScreen = RecipeStepScreen(foodID)
         self.manager.add_widget(recipeStepScreen)
         self.manager.current = 'recipe'
+        db.close()

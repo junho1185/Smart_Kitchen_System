@@ -8,6 +8,7 @@ from DB import mysqlDB
 
 from customizedWidgets import cButton
 from customizedWidgets import cLabel
+from screen.MaterialShow import MaterialShow
 
 
 class MaterialScreen(Screen):
@@ -46,9 +47,22 @@ class MaterialScreen(Screen):
         # section to add materials!
         for material in self.materials:
             button = cButton(text=material, size_hint_y=None, size=(100, 150))
+            button.bind(on_press=self.switchMaterialShow)
             self.scrollContent.add_widget(button)
 
         scrollLayout.add_widget(self.scrollContent)
         layout.add_widget(scrollLayout)
 
         return layout
+
+    def switchMaterialShow(self, button):
+        Name = button.text
+        try:
+            self.manager.remove_widget(self.manager.get_screen('material'))
+        except KeyError:
+            # Handle the case when the 'recipe' screen object does not exist
+            print("The 'material' screen does not exist.")
+
+        MaterialShowScreen = MaterialShow(Name)
+        self.manager.add_widget(MaterialShowScreen)
+        self.manager.current = 'material'
