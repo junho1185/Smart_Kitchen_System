@@ -1,4 +1,5 @@
 import speech_recognition as sr
+import pyaudio
 
 class voiceRecognition:
     def __init__(self):
@@ -8,7 +9,8 @@ class voiceRecognition:
 
     def speechToText(self):
 
-
+        index = pyaudio.PyAudio().get_device_count()
+        print(index)
 
         # 마이크를 사용해 음성 입력 받기
         with sr.Microphone(device_index=0) as source:
