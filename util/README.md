@@ -39,3 +39,76 @@ mouse = mouse
 # mtdev_%(name)s = probesysfs,provider=mtdev 
 hid_%(name)s = probesysfs,provider=hidinput
 ```
+
+## Install MariaDB
+Raspberry Pi does not supprt MySQL. Download MariaDB Instead. It works the same.
+```
+sudo apt update && sudo apt upgrade
+```
+```
+sudo apt install mariadb-server
+```
+Following `sudo mysql`, run the command below to set the password for root.
+```
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+```
+Run this command to flush previous data.
+```
+FLUSH PRIVILEGES;
+```
+Run this command to enter MySQL(MariaDB)
+```
+sudo mysql -u root -p
+```
+
+## Database initialization
+Run the following commands to init database
+```
+CREATE DATABASE Smart_Kitchen_System;
+```
+```
+USE Smart_Kitchen_System;
+```
+```
+CREATE TABLE RecipeIndex(
+  id INT NOT NULL AUTO_INCREMENT,
+  foodName VARCHAR(20) NOT NULL,
+  region INT NOT NULL,
+  PRIMARY KEY(id)
+);
+```
+```
+CREATE TABLE Materials(
+  name VARCHAR(20) NOT NULL,
+  location INT NOT NULL
+);
+```
+```
+CREATE TABLE RecipeSteps(
+  stepNum INT NOT NULL,
+  recipe VARCHAR(100) NOT NULL,
+  foodID INT NOT NULL
+);
+```
+
+## Install Nanum Fonts if you are using Korean
+```
+sudo apt update && sudo apt upgrade
+```
+```
+sudo apt install fonts-nanum
+```
+
+## Set Environment Variables
+Edit `~/.profile` with your editor and add the following
+
+```
+export OPENAI_API_KEY=Your_API_Key
+export MYSQL_PASSWORD=Your_password
+export DISPLAY=:0
+```
+Then run this command to apply changes
+```
+source ~/.profile
+```
+
