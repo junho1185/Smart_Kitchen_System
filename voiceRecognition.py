@@ -1,4 +1,5 @@
 import speech_recognition as sr
+import sounddevice
 
 class voiceRecognition:
     def __init__(self):
