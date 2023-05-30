@@ -46,7 +46,7 @@ class MaterialScreen(Screen):
 
         # section to add materials!
         for material in self.materials:
-            button = cButton(text=material, size_hint_y=None, size=(100, 150))
+            button = cButton(text=material, size_hint_y=None, size=(100, 150), background_normal=f'img/material/{material}.png')
             button.bind(on_press=self.switchMaterialShow)
             self.scrollContent.add_widget(button)
 
