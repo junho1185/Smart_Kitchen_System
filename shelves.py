@@ -16,7 +16,7 @@ class shelves:
         for location in self.location_list:
             # Put some code to rotate the shelf
             print("rotating to . . .", location)
-            time.sleep(5)
+            time.sleep(3)
             ser.write(str(location).encode())
             while True:
                 if ser.in_waiting > 0:
