@@ -50,6 +50,8 @@ class MainScreenVoice(Screen):
 
         type = json_data['Type']
         name = json_data['Name']
+        print('Type: ', type)
+        print('Name: ', name)
 
         if type == 'Dish':
             self.switchRecipeStep(name)

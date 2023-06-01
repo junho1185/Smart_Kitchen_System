@@ -16,6 +16,7 @@ class mysqlDB:
         query = "SELECT ID FROM RecipeIndex WHERE foodName=%s"
         self.cursor.execute(query, [foodName])
         fetchResult = self.cursor.fetchall()
+        print(fetchResult)
         return fetchResult[0][0]
 
     def getFoodNames(self, region):
