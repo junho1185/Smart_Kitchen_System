@@ -54,7 +54,6 @@ class MaterialScreen(Screen):
         layout.add_widget(scrollLayout)
 
         return layout
-
     def switchMaterialShow(self, button):
         Name = button.text
         try:

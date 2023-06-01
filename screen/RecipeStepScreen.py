@@ -3,6 +3,7 @@ from kivy.uix.screenmanager import Screen
 from customizedWidgets import cLabel, cButton, setting
 from DB import mysqlDB
 from shelves import shelves
+from kivy.clock import Clock
 
 class RecipeStepScreen(Screen):
     def __init__(self, foodID, **kwargs):
@@ -76,4 +77,4 @@ class RecipeStepScreen(Screen):
             location_list.append(self.mydb.getPosition(material))
 
         sh = shelves(location_list)
-        sh.rotate()
+        Clock.schedule_once(sh.rotate, 3)
