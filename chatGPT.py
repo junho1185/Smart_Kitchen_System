@@ -33,3 +33,24 @@ class ChatGPT:
 
         with open(filename, "a", encoding="utf-8") as file:
             file.write(str(response) + '\n')
+
+    def get_recipe(self, name):
+        instruction = "Give me a recipe of " + name + ". All recipe text must be in Korean. You need to answer only the recipe text." \
+                                                      "Separate each step by character \'/\' so I can parse it easily." \
+                                                      "Now put it into a json format. Field name for the recipe text must be \'Recipe\'" \
+                                                      "Another field would be \'Region\' which indicates where the food comes from." \
+                                                      "Value for the field would be an integer from 1 to 4. Korean(1), Japanese(2), " \
+                                                      "Chinese(3), Western(4). Just give me the json format text."
+        try:
+            response = openai.ChatCompletion.create(
+                model=self.model,
+                messages=[
+                    {"role": "system", "content": instruction}
+                ]
+            )
+            self.write_history(response)
+            return response.choices[0].message['content']
+
+        except Exception as e:
+            print(f'Error occurred during ChatGPT request. Error Message: {e}')
+            return None

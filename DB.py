@@ -17,7 +17,10 @@ class mysqlDB:
         self.cursor.execute(query, [foodName])
         fetchResult = self.cursor.fetchall()
         print(fetchResult)
-        return fetchResult[0][0]
+        if(len(fetchResult)):
+            return fetchResult[0][0]
+        else:
+            return None
 
     def getFoodNames(self, region):
         query = "SELECT foodName FROM RecipeIndex WHERE region=%s"
@@ -65,6 +68,21 @@ class mysqlDB:
             material_list.append(fetchResult[i][0])
 
         return material_list
+
+    def putRecipe(self, name, region, recipe):
+        query = "INSERT INTO RecipeIndex (foodName, region) VALUES (%s, %s)"
+        self.cursor.execute(query, (name, region))
+        self.mydb.commit()
+
+        recipes = recipe.split('/')
+        stepNum = 1
+        foodID = self.getID(name)
+
+        for r in recipes:
+            query = "INSERT INTO RecipeSteps (foodID, stepNum, recipe) VALUES (%s, %s, %s)"
+            self.cursor.execute(query, (foodID, stepNum, r))
+            self.mydb.commit()
+            stepNum += 1
 
     def close(self):
         self.mydb.close()

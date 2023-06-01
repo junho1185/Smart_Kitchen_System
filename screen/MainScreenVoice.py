@@ -23,6 +23,8 @@ class MainScreenVoice(Screen):
     def __init__(self, **kwargs):
         super(MainScreenVoice, self).__init__(**kwargs)
 
+        self.cGPT = ChatGPT()
+
         layout = FloatLayout()
 
         mic_button = Button(text='mic', pos_hint={'center_x':0.5, 'center_y':0.5}, size_hint=(0.3, 0.3))
@@ -44,8 +46,8 @@ class MainScreenVoice(Screen):
         vR.speechToText()
         text = vR.text
 
-        cGPT = ChatGPT(text)
-        json_response = cGPT.get_response()
+        self.cGPT = ChatGPT(text)
+        json_response = self.cGPT.get_response()
         json_data = json.loads(json_response)
 
         type = json_data['Type']
@@ -102,6 +104,15 @@ class MainScreenVoice(Screen):
         db = mysqlDB()
         foodName = name
         foodID = db.getID(foodName)
+        if foodID is None:  # Recipe does not exist in the database
+            print("Recipe does not exist, creating one from ChatGPT...")
+            recipe_json = self.cGPT.get_recipe(name)
+            recipe_json = json.loads(recipe_json)
+            recipe_text = recipe_json['Recipe']
+            recipe_region = int(recipe_json['Region'])
+            db.putRecipe(foodName, recipe_region, recipe_text)
+
+
         try:
             self.manager.remove_widget(self.manager.get_screen('recipe'))
         except KeyError:
