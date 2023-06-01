@@ -16,4 +16,9 @@ class shelves:
         for location in self.location_list:
             # Put some code to rotate the shelf
             print("rotating to . . .", location)
-            ser.write(location)
+            ser.write(str(location).encode())
+            while True:
+                if ser.in_waiting > 0:
+                    my_variable = int(ser.readline().decode().rstrip())
+                    print("Received variable:", my_variable)
+                    break

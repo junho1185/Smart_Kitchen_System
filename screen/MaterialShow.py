@@ -22,6 +22,7 @@ class MaterialShow(Screen):
         position = db.getPosition(self.materialName)
         sh = shelves([position])
         sh.rotate()
+        self.switchMain()
 
     def switchMain(self, *args):
         S = setting()
