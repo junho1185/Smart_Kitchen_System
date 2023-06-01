@@ -564,3 +564,24 @@
     "total_tokens": 104
   }
 }
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\": \"Dish\",\n   \"Name\": \"\uc9dc\uc7a5\uba74\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685613682,
+  "id": "chatcmpl-7MZPOmIalodvjFQbYsJCswtPV2kbh",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 82,
+    "total_tokens": 102
+  }
+}
