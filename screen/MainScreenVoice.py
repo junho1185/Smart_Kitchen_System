@@ -45,9 +45,7 @@ class MainScreenVoice(Screen):
         vR = voiceRecognition()
         vR.speechToText()
         text = vR.text
-
-        self.cGPT = ChatGPT(text)
-        json_response = self.cGPT.get_response()
+        json_response = self.cGPT.get_response(text)
         json_data = json.loads(json_response)
 
         type = json_data['Type']
@@ -106,6 +104,7 @@ class MainScreenVoice(Screen):
         foodID = db.getID(foodName)
         if foodID is None:  # Recipe does not exist in the database
             print("Recipe does not exist, creating one from ChatGPT...")
+
             recipe_json = self.cGPT.get_recipe(name)
             recipe_json = json.loads(recipe_json)
             recipe_text = recipe_json['Recipe']

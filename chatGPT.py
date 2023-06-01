@@ -3,22 +3,22 @@ import os
 
 
 class ChatGPT:
-    def __init__(self, speechTxt):
+    def __init__(self):
         openai.api_key = os.environ.get("OPENAI_API_KEY")
         self.model = "gpt-3.5-turbo"
-        self.userSpeechText = "\"" + speechTxt + "\"\n"
-        self.instruction = 'You are a natural language processor, the text above is what was recognized by mic input.' \
+
+    def get_response(self, speechTxt):
+        userSpeechText = "\"" + speechTxt + "\"\n"
+        instruction = 'You are a natural language processor, the text above is what was recognized by mic input.' \
                            'Summarize what they want and put it into a json format. There are two fields.' \
                            'Type and Name. Type must be either Dish or Ingredient. Name must be represented in Korean.' \
                            'Just give me a json format text.'
-        self.command = (self.userSpeechText + self.instruction)
-
-    def get_response(self):
+        command = userSpeechText + instruction
         try:
             response = openai.ChatCompletion.create(
                 model=self.model,
                 messages=[
-                    {"role": "system", "content": self.command}
+                    {"role": "system", "content": command}
                 ]
             )
             self.write_history(response)
