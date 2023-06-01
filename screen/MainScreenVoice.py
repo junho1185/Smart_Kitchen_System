@@ -57,6 +57,8 @@ class MainScreenVoice(Screen):
             self.switchRecipeStep(name)
         elif type == 'Ingredient':
             self.switchMaterialShow(name)
+        else:
+            pass
 
 
 

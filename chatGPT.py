@@ -13,6 +13,7 @@ class ChatGPT:
                            'Summarize what they want and put it into a json format. There are two fields.' \
                            'Type and Name. Type must be either Dish or Ingredient. Name must be ' \
                       'the corresponding food name or ingredient name represented in Korean.' \
+                      'If the recognized text does not contain either Dish nor Ingredient, put None to both fields.' \
                            'Just give me a json format text.'
         command = userSpeechText + instruction
         try:
@@ -39,7 +40,7 @@ class ChatGPT:
         instruction = "Give me a recipe of " + name + ". All recipe text must be in Korean. You need to answer only the recipe text." \
                                                       "Separate each step by character \'/\' so I can parse it easily." \
                                                       "Remove the numbers of each steps of the recipe." \
-                                                      "The string length of each recipe step should not exceed 50. " \
+                                                      "The string length of each recipe step should not exceed 30. " \
                                                       "So rather divide it into several steps than putting it all together." \
                                                       "Now put it into a json format. Field name for the recipe text must be \'Recipe\'" \
                                                       "Another field would be \'Region\' which indicates where the food comes from." \
