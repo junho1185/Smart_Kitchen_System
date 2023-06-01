@@ -78,4 +78,3 @@ class RecipeStepScreen(Screen):
             location_list.append(self.mydb.getPosition(material))
 
         sh = shelves(location_list)
-        Clock.schedule_once(sh.rotate())

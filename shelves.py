@@ -1,6 +1,7 @@
 from kivy.uix.popup import Popup
 import time
 import serial
+from kivy.clock import Clock
 
 # 시리얼 통신을 위한 포트 번호와 전송 속도를 설정합니다.
 port = "COM5"  # 포트 번호
@@ -11,6 +12,7 @@ ser = serial.Serial("COM5", baudrate)
 class shelves:
     def __init__(self, location_list):
         self.location_list = location_list
+        Clock.schedule_once(self.rotate, 1)
 
     def rotate(self, *args):
         for location in self.location_list:
