@@ -312,3 +312,255 @@
     "total_tokens": 95
   }
 }
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\": \"Ingredient\",\n   \"Name\": \"\uac00\ub098\ub2e4\ub77c\ub9c8\ubc14\uc0ac\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685608539,
+  "id": "chatcmpl-7MY4RkhDmzetLppaQzTJPJi3g0ZMQ",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 24,
+    "prompt_tokens": 90,
+    "total_tokens": 114
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Type\": \"Dish\",\n    \"Name\": \"\uae40\uce58\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685608725,
+  "id": "chatcmpl-7MY7RVcr3DSITgdbNjPHPtf2yNQj1",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 83,
+    "total_tokens": 105
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\": \"Ingredient\",\n   \"Name\": \"\ubc00\uac00\ub8e8\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685608761,
+  "id": "chatcmpl-7MY81zkKsiI0yY1Xumsvmso0LkhCI",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 71,
+    "total_tokens": 91
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Type\": \"Dish\",\n    \"Name\": \"\uae40\uce58\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685608782,
+  "id": "chatcmpl-7MY8MRirQG3HYBRsD7nbwU81EBaTr",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 85,
+    "total_tokens": 107
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\uae40\uce58\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685610013,
+  "id": "chatcmpl-7MYSDZFRKFp6UuCf8aldj8yPkZCYH",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 83,
+    "total_tokens": 105
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\uacc4\ub780\ub9d0\uc774\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685610098,
+  "id": "chatcmpl-7MYTaMNN4uEs6r1Uy9VLGUPLi0Q4Z",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 23,
+    "prompt_tokens": 82,
+    "total_tokens": 105
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\":\"Dish\",\n   \"Name\":\"\ud574\ubb3c\uc9ec\ubf55\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685610124,
+  "id": "chatcmpl-7MYU0geRpVCwAWZC9sdelGNIZP5Bb",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 23,
+    "prompt_tokens": 89,
+    "total_tokens": 112
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\uc9ec\ubf55\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685610144,
+  "id": "chatcmpl-7MYUKsF2dPLcwbdj2pmg8s7B3Gchq",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 21,
+    "prompt_tokens": 85,
+    "total_tokens": 106
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\"Type\": \"Dish\", \"Name\": \"\ub098 10\ub3d9\"}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685610193,
+  "id": "chatcmpl-7MYV7SpzFEYG3DNmoEZGFpj1sonfT",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 16,
+    "prompt_tokens": 83,
+    "total_tokens": 99
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\ub374\ub3d9\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685610212,
+  "id": "chatcmpl-7MYVQtEL0KO4TFuWVsEGqDsutfZRh",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 19,
+    "prompt_tokens": 82,
+    "total_tokens": 101
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\": \"Dish\",\n   \"Name\": \"\ub41c\uc7a5\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685610281,
+  "id": "chatcmpl-7MYWX9RcxlHLsS5R6n5I0rHDn8Trj",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 21,
+    "prompt_tokens": 89,
+    "total_tokens": 110
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\ub41c\uc7a5\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685613356,
+  "id": "chatcmpl-7MZK87zLXg98fZqu4X2neBq7vTz1u",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 21,
+    "prompt_tokens": 83,
+    "total_tokens": 104
+  }
+}
