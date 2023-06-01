@@ -26,7 +26,6 @@ class RecipeStepScreen(Screen):
         self.nextButton = cButton(text='다음', size_hint=(0.2, 0.8), pos_hint={'center_x': 0.9, 'center_y': 0.5})
 
         self.recipe = self.mydb.getRecipe(foodID)
-        self.contentUpdate()
 
         self.prevButton.bind(on_press=self.prevStep)
         self.nextButton.bind(on_press=self.nextStep)
@@ -40,6 +39,8 @@ class RecipeStepScreen(Screen):
         layout.add_widget(footer_layout)
 
         self.add_widget(layout)
+
+        Clock.schedule_once(self.contentUpdate, 2)
 
     def prevStep(self, *args):
         if self.currentStep == 0:
