@@ -107,9 +107,11 @@ class MainScreenVoice(Screen):
 
             recipe_json = self.cGPT.get_recipe(name)
             recipe_json = json.loads(recipe_json)
-            recipe_text = recipe_json['Recipe']
+            recipe_text = recipe_json['Recipe'].strip()
             recipe_region = int(recipe_json['Region'])
             db.putRecipe(foodName, recipe_region, recipe_text)
+
+            foodID = db.getID(foodName)
 
 
         try:

@@ -585,3 +585,213 @@
     "total_tokens": 102
   }
 }
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\":\"Dish\",\n   \"Name\":\"\uc9ec\ubf55\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685616742,
+  "id": "chatcmpl-7MaCkYvbXNBGqckin3wp87yDPh9Q5",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 19,
+    "prompt_tokens": 83,
+    "total_tokens": 102
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Recipe\": \"1. \ud64d\ud569\uc744 \uccad\uc18c\ud558\uc5ec \ubb3c\uc5d0 \ub2f4\uac00 \ubaa8\ub798\ub97c \uc81c\uac70\ud574\uc900\ub2e4./2. \ub053\ub294 \ubb3c\uc5d0 \uc721\uc218\uc6a9 \uc7ac\ub8cc\ub97c \ub123\uace0 30\ubd84\uac04 \uc6b0\ub824\ub0b8 \ud6c4 \uccb4\uc5d0 \uac78\ub7ec \uc120\ubcc4\ud55c\ub2e4./3. \uc591\ud30c\uc640 \ubb34\ub97c 1cm \ud06c\uae30\ub85c \uc370\uc5b4 \ubb3c\uc5d0 \uc0b4\uc9dd \ud5f9\uad88 \uccb4\uc5d0 \uac78\ub7ec \ubb3c\uae30\ub97c \ube7c\uc900\ub2e4./4. \ud32c\uc5d0 \uc2dd\uc6a9\uc720\ub97c \ub450\ub974\uace0 \ud64d\uace0\ucd94, \uccad\uc591\uace0\ucd94, \ub300\ud30c\ub97c \ubcf6\uc740 \ud6c4 \uad6d\uac04\uc7a5, \ucc38\uae30\ub984, \uace0\ucd94\uae30\ub984, \uc124\ud0d5\uc744 \ub123\uc5b4 \ubcf6\ub294\ub2e4./5. \uac74\uc0c8\uc6b0\uc640 \ud64d\ud569\uc0b4, \ubb3c\uc5d0 \ubd88\ub9b0 \uc624\uc9d5\uc5b4, \uac74\ubbf8\uc5ed\uc744 \ub123\uace0 \ubcf6\uc544\uc900\ub2e4./6. \ub053\ub294 \uc721\uc218\uc5d0 4\ub97c \ub123\uace0 5\ubd84\uac04 \ub053\uc5ec\uc900\ub2e4./7. \ub2f9\uba74\uacfc \uc591\ub150\uac04\uc7a5\uc744 \ub123\uace0 2\ubd84\uac04 \ub053\uc5ec\uc900 \ud6c4 \ubd88\uc744 \ub048\ub2e4./8. \ud6c4\ucd94\ub97c \ubfcc\ub824 \ub9c8\ubb34\ub9ac\ud55c\ub2e4.\", \n    \"Region\": 3\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685616745,
+  "id": "chatcmpl-7MaCnEdqvb9WJiPUDie7NkrqQvj0U",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 331,
+    "prompt_tokens": 121,
+    "total_tokens": 452
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"requests\": [\n    {\"Type\": \"Dish\", \"Name\": \"\uc9ec\ubf55\"}\n  ]\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685617041,
+  "id": "chatcmpl-7MaHZHK76kaA7X356MkeYZTY4Cr2z",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 27,
+    "prompt_tokens": 105,
+    "total_tokens": 132
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Type\": \"Dish\",\n    \"Name\": \"\uc9ec\ubf55\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685617145,
+  "id": "chatcmpl-7MaJFbZKOYNc4RY7ikdgAgbbJpZFs",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 21,
+    "prompt_tokens": 90,
+    "total_tokens": 111
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Recipe\": \"\uba78\uce58\uc640 \uad6d\ubb3c\uc6a9\uba78\uce58, \ub300\ud30c, \ud64d\uace0\ucd94, \uc591\ud30c, \ub9c8\ub298, \uc0dd\uac15, \uc81c\uc8fc \ud669\uace0\ucd94, \ub2e4\uc2dc\ub9c8, \uccad\uace0\ucd94, \ud0a4\uc704 / \uae30\ub984, \uace0\ucda7\uac00\ub8e8, \uc18c\uae08, \ubb3c, \ucc38\uae30\ub984, \ub9db\uc220, \uac04\uc7a5, \ubc84\uc12f, \ub2f9\uba74, \uc0c8\uc6b0, \ud64d\uac8c / \uba78\uce58\uc640 \uad6d\ubb3c\uc6a9\uba78\uce58\ub97c \ubaa8\ub450 \uc900\ube44\ud558\uace0, \ub300\ud30c, \ud64d\uace0\ucd94, \uc591\ud30c, \ub9c8\ub298, \uc0dd\uac15 \ub4f1\uc744 \uc798\uac8c \uc36c\ub2e4./ \uc5d0\ube44\uc640 \ud64d\uac8c\ub294 \uae68\ub057\uc774 \uc53b\uc740 \ub2e4\uc74c \ucc44 \uc36c\ub2e4. / \ud32c\uc5d0 \uae30\ub984\uc744 \ub450\ub974\uace0, \uace0\ucda7\uac00\ub8e8\ub97c \ub178\ub987\ud558\uac8c \ubcf6\uc544 \uc18c\uae08\uacfc \ubb3c\uc744 \ub123\uc5b4 \uad6d\ubb3c\uc744 \ub9cc\ub4e0\ub2e4. / \uad6d\ubb3c\uc774 \ub053\uc73c\uba74 \uba78\uce58\uc640 \ubb3c\uc744 \ub123\uace0 \ub2e4\uc2dc \ud55c \ubc88 \ub053\uc778\ub2e4. / \uccad\uacc4\ud30c\ub97c \ub123\uace0 \uc57d \ubd88\ub85c \ub053\uc778\ub2e4. / \ub053\uae30 \uc2dc\uc791\ud558\uba74 \uace0\ucda7\uac00\ub8e8, \uc18c\uae08, \ucc38\uae30\ub984 \ub4f1\uc744 \ub123\uace0 \uac04\uc744 \ub9de\ucd98\ub2e4. / \ubc84\uc12f, \uc0c8\uc6b0, \ud64d\uac8c, \ub2e4\uc2dc\ub9c8, \uc624\uc9d5\uc5b4, \ub2f9\uba74 \ub4f1 \uc7ac\ub8cc\ub97c \ub123\uace0 \ub053\uc778\ub2e4. / \ub9c8\uc9c0\ub9c9\uc73c\ub85c \ud0a4\uc704\ub97c \ub123\uace0 \ub2f9\uba74\uc774 \uc775\uc744 \ub54c\uae4c\uc9c0 \ub053\uc778\ub2e4.\",\n    \"Region\": 1\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685617148,
+  "id": "chatcmpl-7MaJIM66CFWH8UdfYPuBrsSfWhRCf",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 430,
+    "prompt_tokens": 130,
+    "total_tokens": 560
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\": \"Ingredient\",\n   \"Name\": \"\ubbf8\uc5ed\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685617336,
+  "id": "chatcmpl-7MaMK0oc1cY1VVndiiJE1DWR5RgKT",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 18,
+    "prompt_tokens": 78,
+    "total_tokens": 96
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\ub9c8\ub77c\uc0f9\uad88\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685617361,
+  "id": "chatcmpl-7MaMj8r0rtZwRP6k7XBcMOWQJSMEq",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 23,
+    "prompt_tokens": 89,
+    "total_tokens": 112
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Recipe\": \"\uc591\ud30c 1\uac1c\ub97c \uc587\uac8c \uc2ac\ub77c\uc774\uc2a4\ud558\uace0, \ub2f9\uadfc 1\uac1c\ub97c \uc587\uac8c \ucc44\uc370\ub2e4. \ub0c4\ube44\uc5d0 \uc2dd\uc6a9\uc720 \ub450\ub978 \ud6c4 \uc591\ud30c\uc640 \ub2f9\uadfc\uc744 \ub123\uc5b4 \ubcf6\ub2e4\uac00 \uc591\ub150\uc7a5\uc744 (\ub9c8\ub77c\ud0d5 \uc591\ub150\uacfc \ubb3c 1:2\ub85c \uc11e\uc740 \uac83) \ub123\uace0 \uc11e\uc5b4 \ub053\uc778\ub2e4. \uace0\uae30\ub294 \ud544\uc218\ub294 \uc544\ub2c8\uc9c0\ub9cc, \ub9c8\ub77c\ud0d5\uc758 \uc591\ub150\ub9db\uc744 \ub354\ud574\uc904 \uc218 \uc788\ub2e4. \uace0\uae30\ub294 \ud55c\uc785 \ud06c\uae30\ub85c \uc36c \ud6c4 \ub0c4\ube44\uc5d0 \ub123\uace0 \ub053\uc778\ub2e4. \uc57c\ucc44\ub294 \uc788\ub294 \uac83\uc744 \ub2e4 \ub123\uc5b4 \ub053\uc77c \uc218 \uc788\ub2e4. \ub77c\uba74\uc740 \uc880 \ub354 \ucac4\uae43\ud558\uac8c \ub053\uc774\uae30 \uc704\ud574 \ud770 \ubd80\ubd84\uc744 \uc798\ub77c\ub0b4\uace0 \uc0b6\uc544 \ub454\ub2e4. \ub053\uc778 \ub9c8\ub77c\ud0d5 \uc591\ub150\uc5d0 \ub77c\uba74\uacfc \uc0c8\uc6b0, \ub300\ud30c\ub97c \ub123\uc5b4 \ub9c8\ubb34\ub9ac\ud55c\ub2e4.\",\n    \"Region\": 3\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685617364,
+  "id": "chatcmpl-7MaMmW7vIIH5LLghkVkwJzSLTzHTW",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 283,
+    "prompt_tokens": 131,
+    "total_tokens": 414
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\ub9c8\ub77c\uc0f9\uad88\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685617805,
+  "id": "chatcmpl-7MaTtbOqPHr25RgsiywPNixFnHBA4",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 23,
+    "prompt_tokens": 95,
+    "total_tokens": 118
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Recipe\": \"1. \uc18c\uace0\uae30(\ud639\uc740 \ub3fc\uc9c0\uace0\uae30)\ub97c \uc801\ub2f9\ud55c \ud06c\uae30\ub85c \uc798\ub77c\ub0b8 \ud6c4 \uba39\uae30 \uc88b\uac8c \uc591\ub150\ud574 \uc900\ub2e4./2. \ubb3c\uc5d0 \uace0\ucda7\uac00\ub8e8, \uc2dd\uc6a9\uc720, \ub9c8\ub298, \uc0dd\uac15 \ub4f1 \ud544\uc694\ud55c \uc7ac\ub8cc\ub97c \ub123\uace0 \uc721\uc218\ub97c \ub053\uc778\ub2e4./3. \ubc84\uc12f, \uc591\ud30c, \uc0c8\uc6b0, \ub2f9\uba74 \ub4f1\uc744 \ub123\uace0 \uc870\ub9ac\ud55c\ub2e4./4. \ubd88\ub9b0 \ub5a1\uc774\ub098 \uadf8\ub0e5 \ub300\ud30c, \ubb34\ub97c \ub123\uace0 \ub9c8\ubb34\ub9ac\ud55c\ub2e4./\",\n    \"Region\": 3\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685617808,
+  "id": "chatcmpl-7MaTwWVWd29gPYOzO3KggNa5Fevmd",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 169,
+    "prompt_tokens": 156,
+    "total_tokens": 325
+  }
+}

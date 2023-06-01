@@ -11,7 +11,8 @@ class ChatGPT:
         userSpeechText = "\"" + speechTxt + "\"\n"
         instruction = 'You are a natural language processor, the text above is what was recognized by mic input.' \
                            'Summarize what they want and put it into a json format. There are two fields.' \
-                           'Type and Name. Type must be either Dish or Ingredient. Name must be represented in Korean.' \
+                           'Type and Name. Type must be either Dish or Ingredient. Name must be ' \
+                      'the corresponding food name or ingredient name represented in Korean.' \
                            'Just give me a json format text.'
         command = userSpeechText + instruction
         try:
@@ -37,6 +38,9 @@ class ChatGPT:
     def get_recipe(self, name):
         instruction = "Give me a recipe of " + name + ". All recipe text must be in Korean. You need to answer only the recipe text." \
                                                       "Separate each step by character \'/\' so I can parse it easily." \
+                                                      "Remove the numbers of each steps of the recipe." \
+                                                      "The string length of each recipe step should not exceed 50. " \
+                                                      "So rather divide it into several steps than putting it all together." \
                                                       "Now put it into a json format. Field name for the recipe text must be \'Recipe\'" \
                                                       "Another field would be \'Region\' which indicates where the food comes from." \
                                                       "Value for the field would be an integer from 1 to 4. Korean(1), Japanese(2), " \

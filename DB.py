@@ -74,15 +74,22 @@ class mysqlDB:
         self.cursor.execute(query, (name, region))
         self.mydb.commit()
 
+        recipe = recipe.strip()
         recipes = recipe.split('/')
         stepNum = 1
         foodID = self.getID(name)
 
+        # Showing result of the generated recipe
+        print("Generated Recipe")
         for r in recipes:
-            query = "INSERT INTO RecipeSteps (foodID, stepNum, recipe) VALUES (%s, %s, %s)"
-            self.cursor.execute(query, (foodID, stepNum, r))
-            self.mydb.commit()
-            stepNum += 1
+            print("#", r)
+
+        for r in recipes:
+            if len(r) > 1:
+                query = "INSERT INTO RecipeSteps (foodID, stepNum, recipe) VALUES (%s, %s, %s)"
+                self.cursor.execute(query, (foodID, stepNum, r))
+                self.mydb.commit()
+                stepNum += 1
 
     def close(self):
         self.mydb.close()
