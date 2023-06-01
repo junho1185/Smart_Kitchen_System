@@ -112,3 +112,45 @@ Then run this command to apply changes
 source ~/.profile
 ```
 
+## Kivy Display Dependencies
+Run Following commands to install dependencies to successfully run the program on your screen.
+```
+sudo apt-get install libsdl2-image-2.0-0
+```
+```
+sudo apt-get install python3-xlib
+```
+
+## Mic settings
+```
+sudo apt install libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev flac
+```
+```
+pip install pyaudio requests websockets
+```
+Run the following commands to check your mic USB port and sound card number.
+```
+lsusb
+```
+```
+arecord -l
+```
+```
+cat /proc/asound/cards
+```
+```
+cat /proc/asound/modules
+```
+Set the default card in the following file
+```
+sudo nano /usr/share/alsa/alsa.conf
+```
+For example if your card is 2
+```
+defaults.ctl.card 2
+defaults.pcm.card 2
+```
+Save and reboot
+```
+sudo reboot
+```
