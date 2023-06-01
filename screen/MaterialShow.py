@@ -3,6 +3,7 @@ from kivy.uix.screenmanager import Screen
 from DB import mysqlDB
 from shelves import shelves
 from customizedWidgets import cLabel, setting
+from kivy.clock import Clock
 import time
 
 
@@ -22,12 +23,11 @@ class MaterialShow(Screen):
         position = db.getPosition(self.materialName)
         sh = shelves([position])
         sh.rotate()
-        self.switchMain()
+        Clock.schedule_once(self.switchMain(), 0)
 
     def switchMain(self, *args):
         S = setting()
         mode = S.getMode()
-
         if mode == 'button':
             self.manager.current = 'main_screen_button'
         else:
