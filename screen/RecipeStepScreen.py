@@ -60,7 +60,7 @@ class RecipeStepScreen(Screen):
         self.currentStep += 1
         self.contentUpdate()
 
-    def contentUpdate(self):
+    def contentUpdate(self, *args):
         recipeText = self.recipe[self.currentStep]
         self.recipeContentLabel.text = recipeText
         self.stepLabel.text = f'{len(self.recipe)} 단계 중 {self.currentStep + 1} 단계'
