@@ -31,7 +31,7 @@ class ChatGPT:
             return None
 
     def write_history(self, response):
-        filename = "../data/chatGPTHistory.txt"
+        filename = "data/chatGPTHistory.txt"
 
         with open(filename, "a", encoding="utf-8") as file:
             file.write(str(response) + '\n')
