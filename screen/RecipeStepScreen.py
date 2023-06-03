@@ -14,6 +14,7 @@ class RecipeStepScreen(Screen):
 
         self.foodName = self.mydb.getFoodName(foodID)
         self.material_list = self.mydb.getMaterials()
+        self.location_list = []
         self.currentStep = 0
 
         layout = BoxLayout(orientation='vertical')
@@ -40,7 +41,7 @@ class RecipeStepScreen(Screen):
 
         self.add_widget(layout)
 
-        Clock.schedule_once(self.contentUpdate, 2)
+        self.contentUpdate()
 
     def prevStep(self, *args):
         if self.currentStep == 0:
@@ -72,9 +73,14 @@ class RecipeStepScreen(Screen):
             if material in recipeText:
                 mList.append(material)
 
-        location_list = []
+        self.location_list = []
         # convert material names to their positions
         for material in mList:
-            location_list.append(self.mydb.getPosition(material))
+            self.location_list.append(self.mydb.getPosition(material))
 
-        sh = shelves(location_list)
+        if len(self.location_list) > 0:
+            Clock.schedule_once(self.rotateShelf, 1)
+    def rotateShelf(self, *args):
+        sh = shelves(self.location_list)
+        sh.rot_thread.start()
+        sh.rot_thread.join()

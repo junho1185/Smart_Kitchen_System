@@ -19,12 +19,14 @@ class MaterialShow(Screen):
         layout.add_widget(centerLabel)
         self.add_widget(layout)
 
-        Clock.schedule_once(self.rotateShelf, 3)
+        Clock.schedule_once(self.rotateShelf, 1)
 
     def rotateShelf(self, *args):
         db = mysqlDB()
         position = db.getPosition(self.materialName)
         sh = shelves([position])
+        sh.rot_thread.start()
+        sh.rot_thread.join()
         self.switchMain()
 
     def switchMain(self, *args):
