@@ -467,8 +467,10 @@ class RecipeStepScreen(Screen):
             self.location_list.append(self.mydb.getPosition(material))
 
         if len(self.location_list) > 0:
+            self.nextButton.disabled = True
             Clock.schedule_once(self.rotateShelf, 1)
     def rotateShelf(self, *args):
         sh = shelves(self.location_list)
         sh.rot_thread.start()
         sh.rot_thread.join()
+        self.nextButton.disabled = False
