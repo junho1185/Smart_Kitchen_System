@@ -30,7 +30,7 @@ class setting:
         mode = config.get('Control', 'mode')
         return mode
     def setMode(self, mode, *args):
-        with open('data/settings.ini', 'w') as configfile:
+        with open('../data/settings.ini', 'w') as configfile:
             config = configparser.ConfigParser()
             config['Control'] = {'mode':mode}
             config.write(configfile)

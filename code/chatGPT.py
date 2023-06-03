@@ -31,12 +31,13 @@ class ChatGPT:
             return None
 
     def write_history(self, response):
-        filename = "data/chatGPTHistory.txt"
+        filename = "../data/chatGPTHistory.txt"
 
         with open(filename, "a", encoding="utf-8") as file:
             file.write(str(response) + '\n')
 
     def get_recipe(self, name):
+        # In case the recipe used requested does not exist in database.
         instruction = "Give me a recipe of " + name + ". All recipe text must be in Korean. You need to answer only the recipe text." \
                                                       "Separate each step by character \'/\' so I can parse it easily." \
                                                       "Remove the numbers of each steps of the recipe." \

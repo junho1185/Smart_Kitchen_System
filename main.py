@@ -2,11 +2,7 @@ from kivy.app import App
 from kivy.config import Config
 from kivy.uix.screenmanager import ScreenManager
 
-from screen.RecipeScreen import RecipeScreen
-from screen.MaterialScreen import MaterialScreen
-from screen.MainScreenButton import MainScreenButton
-from screen.MainScreenVoice import MainScreenVoice
-from customizedWidgets import setting
+from code.screens import *
 
 class MyApp(App):
     def build(self):
