@@ -795,3 +795,87 @@
     "total_tokens": 325
   }
 }
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n   \"Type\": \"Dish\",\n   \"Name\": \"\ub41c\uc7a5\ucc0c\uac1c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685888107,
+  "id": "chatcmpl-7Ninbi50wWbQkFbAjT5BFPmRWAi5u",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 21,
+    "prompt_tokens": 107,
+    "total_tokens": 128
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\uc81c\uc721\ubcf6\uc74c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685889098,
+  "id": "chatcmpl-7Nj3aq31swS6kljQn2lYuBXyurOJk",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 108,
+    "total_tokens": 130
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n  \"Type\": \"Dish\",\n  \"Name\": \"\ub9c8\ub77c\uc0f9\uad88\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685889466,
+  "id": "chatcmpl-7Nj9WnXlLel171akTiHyBKD5lxELd",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 23,
+    "prompt_tokens": 110,
+    "total_tokens": 133
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Recipe\": \"1. \uc591\ud30c, \ub300\ud30c, \ub9c8\ub298 \ub4f1\uc758 \ucc44\uc18c\ub97c \ub2e4\ub4ec\uace0 \uc591\ub150\uc7a5 \uc7ac\ub8cc\ub4e4\uc744 \uc11e\uc5b4\uc900\ub2e4. / 2. \uc591\ub150\uc7a5\uc744 \uc798 \uc11e\uc740 \ud6c4, \uccb4\ub85c \uc5ec\uacfc\ud574 \uac78\ub7ec\ub0b8\ub2e4. / 3. \uace0\uae30\ub294 \uc801\ub2f9\ud55c \ud06c\uae30\ub85c \uc798\ub77c\ub450\uace0, \uc2dd\uc6a9\uc720\uc5d0 \ubcf6\uc544\uc900\ub2e4. / 4. \uae30\ub984\uae30\ub97c \ube80 \ud6c4, \ucc44\uc18c\ub97c \ub123\uace0 \ubcf6\uc544\uc900\ub2e4. / 5. \uc801\ub2f9\ud788 \uc775\uc740 \uace0\uae30\uc640 \ucc44\uc18c\uc5d0 \ub9c8\ub77c\ub294 \uc591\ub150\uc7a5\uc744 \ub123\uace0 \ubcf6\uc544\uc900\ub2e4. / 6. \ucc9c\uc77c\uc5fc, \ud6c4\ucd94 \ub4f1\uc73c\ub85c \uac04\uc744 \ub9de\ucdb0 \ub053\uc778 \ud6c4, \ub9c8\ubb34\ub9ac\ud55c\ub2e4.\",\n    \"Region\": 3\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1685889469,
+  "id": "chatcmpl-7Nj9Zh035WIwvoiFcZVAT65oeJFki",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 225,
+    "prompt_tokens": 156,
+    "total_tokens": 381
+  }
+}

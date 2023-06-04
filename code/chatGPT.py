@@ -31,7 +31,7 @@ class ChatGPT:
             return None
 
     def write_history(self, response):
-        filename = "data/chatGPTHistory.txt"
+        filename = "code/data/chatGPTHistory.txt"
 
         with open(filename, "a", encoding="utf-8") as file:
             file.write(str(response) + '\n')
@@ -40,7 +40,7 @@ class ChatGPT:
         # In case the recipe used requested does not exist in database.
         instruction = "Give me a recipe of " + name + ". All recipe text must be in Korean. You need to answer only the recipe text." \
                                                       "Separate each step by character \'/\' so I can parse it easily." \
-                                                      "Remove the numbers of each steps of the recipe." \
+                                                      "DO NOT include sequence numbers for each step." \
                                                       "The string length of each recipe step should not exceed 30. " \
                                                       "So rather divide it into several steps than putting it all together." \
                                                       "Now put it into a json format. Field name for the recipe text must be \'Recipe\'" \
