@@ -352,28 +352,28 @@ class RecipeScreen(Screen):
             foodNames = db.getFoodNames(1)
             for foodName in foodNames:
                 button = cButton(text=foodName, size_hint_y=None, size=(100, image_height),
-                                 background_normal=f'img/Korean/{foodName}.png')
+                                 background_normal=f'code/img/Korean/{foodName}.png')
                 button.bind(on_press=self.switchRecipeStep)
                 self.scrollContent.add_widget(button)
         elif button.text == '일식':
             foodNames = db.getFoodNames(2)
             for foodName in foodNames:
                 button = cButton(text=foodName, size_hint_y=None, size=(100, image_height),
-                                 background_normal=f'img/Japanese/{foodName}.png')
+                                 background_normal=f'code/img/Japanese/{foodName}.png')
                 button.bind(on_press=self.switchRecipeStep)
                 self.scrollContent.add_widget(button)
         elif button.text == '중식':
             foodNames = db.getFoodNames(3)
             for foodName in foodNames:
                 button = cButton(text=foodName, size_hint_y=None, size=(100, image_height),
-                                 background_normal=f'img/Chinese/{foodName}.png')
+                                 background_normal=f'code/img/Chinese/{foodName}.png')
                 button.bind(on_press=self.switchRecipeStep)
                 self.scrollContent.add_widget(button)
         else:
             foodNames = db.getFoodNames(4)
             for foodName in foodNames:
                 button = cButton(text=foodName, size_hint_y=None, size=(100, image_height),
-                                 background_normal=f'img/Western/{foodName}.png')
+                                 background_normal=f'code/img/Western/{foodName}.png')
                 button.bind(on_press=self.switchRecipeStep)
                 self.scrollContent.add_widget(button)
 
