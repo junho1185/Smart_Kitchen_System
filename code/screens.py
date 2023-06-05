@@ -267,7 +267,7 @@ class MaterialShow(Screen):
         layout.add_widget(centerLabel)
         self.add_widget(layout)
 
-        Clock.schedule_once(self.rotateShelf, 3)
+        Clock.schedule_once(self.rotateShelf, 1)
 
     def rotateShelf(self, *args):
         db = mysqlDB()
