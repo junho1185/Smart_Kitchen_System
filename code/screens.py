@@ -104,7 +104,7 @@ class MainScreenVoice(Screen):
 
         self.add_widget(layout)
 
-    def micOnClick(self):
+    def micOnClick(self, *args):
         self.mic_button.text = '처리하는 중 입니다...'
         self.mic_button.disabled = True
         Clock.schedule_once(self.micFunc, 1)
