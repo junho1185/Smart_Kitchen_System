@@ -5,9 +5,9 @@ import threading
 class shelves:
     def __init__(self, location_list):
         self.location_list = location_list
-        self.port = "COM5"  # Port Number for Arduino
+        self.port = "/dev/ttyACM0"  # Port Number for Arduino
         self.bRate = 9600  # Board Rate
-        # self.ser = serial.Serial(self.port, self.bRate)  # Serial Communication Variable
+        self.ser = serial.Serial(self.port, self.bRate)  # Serial Communication Variable
 
         self.rot_thread = threading.Thread(target=self.rotate)
 
@@ -16,7 +16,7 @@ class shelves:
         for location in self.location_list:
             # Put some code to rotate the shelf
             print("rotating to . . .", location)
-            # self.arduinoSignal(location)
+            self.arduinoSignal(location)
             time.sleep(3)
 
     def arduinoSignal(self, location):
