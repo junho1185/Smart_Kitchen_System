@@ -131,6 +131,7 @@ class MainScreenVoice(Screen):
         else:
             self.statusLabel.text = "다시 말씀해주세요."
             self.mic_button.disabled = False
+            self.mic_button.text = 'mic'
 
 
 
