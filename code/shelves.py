@@ -29,3 +29,4 @@ class shelves:
                 my_variable = int(self.ser.readline().decode().rstrip())
                 print("Received variable:", my_variable)
                 break
+        self.ser.close()
