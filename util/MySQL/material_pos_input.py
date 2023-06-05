@@ -14,7 +14,7 @@ query = 'DELETE FROM Materials'
 cursor.execute(query)
 mydb.commit()
 
-materials = ["간장", "참기름", "설탕", "소금", "후추", "식용유", "맛술", "꿀", "식초", "고춧가루"]
+materials = ["후추", "고춧가루", "설탕", "소금", "참기름", "식초", "맛술", "식용유", "꿀", "간장"]
 
 for i in range(len(materials)):
     query = "INSERT INTO Materials (name, location) VALUES (%s, %s)"
