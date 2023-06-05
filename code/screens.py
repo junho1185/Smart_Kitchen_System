@@ -267,7 +267,7 @@ class MaterialShow(Screen):
         layout.add_widget(centerLabel)
         self.add_widget(layout)
 
-        Clock.schedule_once(self.rotateShelf, 1)
+        Clock.schedule_once(self.rotateShelf, 2)
 
     def rotateShelf(self, *args):
         db = mysqlDB()
@@ -430,7 +430,7 @@ class RecipeStepScreen(Screen):
 
         self.add_widget(layout)
 
-        self.contentUpdate()
+        Clock.schedule_once(self.contentUpdate, 1)
 
     def prevStep(self, *args):
         if self.currentStep == 0:

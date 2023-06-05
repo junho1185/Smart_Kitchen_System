@@ -56,7 +56,10 @@ class mysqlDB:
         self.cursor.execute(query, [material])
         fetchResult = self.cursor.fetchall()
 
-        return int(fetchResult[0][0])
+        if len(fetchResult[0]) > 0:
+            return int(fetchResult[0][0])
+        else:
+            return 11
 
     def getMaterials(self):
         query = "SELECT name FROM Materials"

@@ -14,6 +14,8 @@ class shelves:
 
     def rotate(self, *args):
         for location in self.location_list:
+            if location == 11:  # impossible location pass
+                continue
             # Put some code to rotate the shelf
             print("rotating to . . .", location)
             self.arduinoSignal(location)
