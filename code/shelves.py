@@ -17,10 +17,10 @@ class shelves:
             # Put some code to rotate the shelf
             print("rotating to . . .", location)
             self.arduinoSignal(location)
-            time.sleep(3)
 
     def arduinoSignal(self, location):
-        time.sleep(3)
+        time.sleep(2)
+        print('sending signal to the Arduino Board. . .')
         self.ser.write(str(location).encode())
         while True:
             if self.ser.in_waiting > 0:
