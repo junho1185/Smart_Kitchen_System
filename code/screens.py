@@ -90,19 +90,24 @@ class MainScreenVoice(Screen):
         layout = FloatLayout()
 
         nameLabel = cLabel(text='Smart Kitchen System', pos_hint={'center_x': 0.5, 'center_y': 0.9})
-        mic_button = Button(text='mic', pos_hint={'center_x':0.5, 'center_y':0.5}, size_hint=(0.3, 0.3))
+        self.mic_button = Button(text='mic', pos_hint={'center_x':0.5, 'center_y':0.5}, size_hint=(0.3, 0.3))
         self.statusLabel = cLabel(text='버튼을 누르고 원하시는 재료/레시피를 말씀하세요.', pos_hint={'center_x':0.5, 'center_y':0.75})
         sButton = Button(text='Settings', pos_hint={'center_x': 0.9, 'center_y': 0.9}, size_hint=(0.1, 0.1))
 
-        mic_button.bind(on_press=self.micFunc)
+        self.mic_button.bind(on_press=self.micFunc)
         sButton.bind(on_press=self.settingPopUp)
 
         layout.add_widget(nameLabel)
         layout.add_widget(self.statusLabel)
-        layout.add_widget(mic_button)
+        layout.add_widget(self.mic_button)
         layout.add_widget(sButton)
 
         self.add_widget(layout)
+
+    def micOnClick(self):
+        self.mic_button.text = '처리하는 중 입니다...'
+        self.mic_button.disabled = True
+        Clock.schedule_once(self.micFunc, 1)
 
     def micFunc(self, *args):
         # mThread = threading.Thread(target=self.micThread)
@@ -125,6 +130,7 @@ class MainScreenVoice(Screen):
             self.switchMaterialShow(name)
         else:
             self.statusLabel.text = "다시 말씀해주세요."
+            self.mic_button.disabled = False
 
 
 

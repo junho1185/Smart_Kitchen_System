@@ -13,7 +13,7 @@ class ChatGPT:
                            'Summarize what they want and put it into a json format. There are two fields.' \
                            'Type and Name. Type must be either Dish or Ingredient. Name must be ' \
                       'the corresponding food name or ingredient name represented in Korean.' \
-                      'If the recognized text does not contain either Dish nor Ingredient, put None to both fields.' \
+                      'If the recognized text does not contain either Dish nor Ingredient, put \'None\' to both fields.' \
                            'Just give me a json format text.'
         command = userSpeechText + instruction
         try:
