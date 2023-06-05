@@ -22,6 +22,8 @@ class shelves:
 
     def arduinoSignal(self, location):
         time.sleep(2)
+        self.ser = serial.Serial(self.port, self.bRate)  # Serial Communication Variable
+
         print('sending signal to the Arduino Board. . .')
         self.ser.write(str(location).encode())
         while True:
