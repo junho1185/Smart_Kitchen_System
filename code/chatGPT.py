@@ -41,7 +41,7 @@ class ChatGPT:
         instruction = "Give me a recipe of " + name + ". All recipe text must be in Korean." \
                                                       "Separate each step of the recipe by character \'/\' so I can parse it easily." \
                                                       "I don't need sequence numbers like 1, 2, 3 ... for each step as it will automatically be created when parsed." \
-                                                      "The string length of each recipe step should not exceed 30. " \
+                                                      "The string length of each recipe step should not exceed 20. " \
                                                       "So rather divide it into several steps than putting it all together." \
                                                       "Now put it into a json format. Field name for the recipe text must be \'Recipe\'." \
                                                       "In the Recipe field, there should be only text in the form of what I mentioned earlier." \
