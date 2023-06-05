@@ -94,7 +94,7 @@ class MainScreenVoice(Screen):
         self.statusLabel = cLabel(text='버튼을 누르고 원하시는 재료/레시피를 말씀하세요.', pos_hint={'center_x':0.5, 'center_y':0.75})
         sButton = Button(text='Settings', pos_hint={'center_x': 0.9, 'center_y': 0.9}, size_hint=(0.1, 0.1))
 
-        self.mic_button.bind(on_press=self.micFunc)
+        self.mic_button.bind(on_press=self.micOnClick)
         sButton.bind(on_press=self.settingPopUp)
 
         layout.add_widget(nameLabel)
