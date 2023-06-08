@@ -38,15 +38,9 @@ class ChatGPT:
 
     def get_recipe(self, name):
         # In case the recipe used requested does not exist in database.
-        instruction = "Give me a recipe of " + name + "in Korean." \
-                                                      "Separate the steps of the recipe by  \'/\' so I can parse it with Python." \
-                                                      "The string length of each recipe sequence should not exceed 20. " \
-                                                      "So rather divide it into several steps than putting it all together." \
-                                                      "Now put it into a json format. Field name for the recipe text must be \'Recipe\'." \
-                                                      "In the \'Recipe\' field, there should be only text in the form of what I mentioned earlier." \
-                                                      "Another field would be \'Region\' which indicates where the food comes from." \
-                                                      "Value for the field would be an integer from 1 to 4. Korean(1), Japanese(2), " \
-                                                      "Chinese(3), Western(4). Just give me the json format text."
+        instruction = name + " 레시피를 한국어로 알려줘. 파이썬을 이용해서 파싱을 할거야. 레시피의 각 단계는 / 로 나눠서 줄 바꿈 없이 한 줄로 표현해줘." \
+                             "각 레시피 단계의 문자 길이는 20자를 넘지 않도록 제한해줘. 그 텍스트를 json 형태에서 Recipe 필드에 넣어줘." \
+                             "다른 필드는 Region이야. 이 필드에는 1, 2, 3, 4 숫자만 들어가. 한식이면 1, 일식이면 2, 중식이면 3, 양식이면 4를 넣어줘."
         try:
             response = openai.ChatCompletion.create(
                 model=self.model,
