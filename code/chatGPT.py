@@ -38,9 +38,9 @@ class ChatGPT:
 
     def get_recipe(self, name):
         # In case the recipe used requested does not exist in database.
-        instruction = name + " 레시피를 한국어로 알려줘. 파이썬을 이용해서 파싱을 할거야. 레시피의 각 단계는 / 로 나눠서 줄 바꿈 없이 한 줄로 표현해줘." \
+        instruction = name + " 레시피를 한국어로 알려줘. 레시피의 각 단계는 / 로 나눠서 줄 바꿈 없이 한 줄로 표현해줘." \
                              "각 레시피 단계의 문자 길이는 20자를 넘지 않도록 제한해줘. 그 텍스트를 json 형태에서 Recipe 필드에 넣어줘." \
-                             "다른 필드는 Region이야. 이 필드에는 1, 2, 3, 4 숫자만 들어가. 한식이면 1, 일식이면 2, 중식이면 3, 양식이면 4를 넣어줘."
+                             "다른 필드는 Region이야. 이 필드에는 1, 2, 3, 4 숫자만 들어가. 한식이면 1, 일식이면 2, 중식이면 3, 양식이면 4를 넣어줘. json 형식의 텍스트만 줘"
         try:
             response = openai.ChatCompletion.create(
                 model=self.model,
