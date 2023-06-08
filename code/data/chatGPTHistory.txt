@@ -1068,3 +1068,45 @@
     "total_tokens": 377
   }
 }
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Type\": \"Ingredient\",\n    \"Name\": \"\uace0\ucd94\uc7a5\"\n} (Example)",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1686137812,
+  "id": "chatcmpl-7Oll6DMOZtu8bzJ0dklvChwcprkiH",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 97,
+    "total_tokens": 119
+  }
+}
+{
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "message": {
+        "content": "{\n    \"Type\": \"Dish\",\n    \"Name\": \"\uc81c\uc721\ubcf6\uc74c\"\n}",
+        "role": "assistant"
+      }
+    }
+  ],
+  "created": 1686138928,
+  "id": "chatcmpl-7Om36wJw21X20nn3EuhCipnjo3WYb",
+  "model": "gpt-3.5-turbo-0301",
+  "object": "chat.completion",
+  "usage": {
+    "completion_tokens": 22,
+    "prompt_tokens": 110,
+    "total_tokens": 132
+  }
+}
