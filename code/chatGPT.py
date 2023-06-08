@@ -39,8 +39,8 @@ class ChatGPT:
     def get_recipe(self, name):
         # In case the recipe used requested does not exist in database.
         instruction = "Give me a recipe of " + name + "in Korean." \
-                                                      "Separate each step of the recipe by character \'/\' so I can parse it easily." \
-                                                      "The string length of each recipe step should not exceed 20. " \
+                                                      "Separate the sequence of the recipe by  \'/\' so I can parse it easily." \
+                                                      "The string length of each recipe sequence should not exceed 20. " \
                                                       "So rather divide it into several steps than putting it all together." \
                                                       "Now put it into a json format. Field name for the recipe text must be \'Recipe\'." \
                                                       "In the Recipe field, there should be only text in the form of what I mentioned earlier." \
